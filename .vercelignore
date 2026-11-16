@@ -1,0 +1,27 @@
+# Read-only junction directories (HARD RULE 8)
+Claude-AppData/
+Gemini-App/
+Gemini-AppData/
+Gemini-Config/
+
+# Workspace rules, memory & local shortcuts
+AGENTS.md
+PROJECT_MEMORY.md
+.agents/
+.backups/
+_to_delete/
+Gemini.lnk
+*.code-workspace
+.git/
+
+# Secrets & environment variables
+.env
+.env.*
+
+# Dependencies & OS files
+node_modules/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+
