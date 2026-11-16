@@ -1,6 +1,6 @@
 # PROJECT MEMORY - Build Agent Ai (nongton)
 
-Last Updated: 2026-11-17 00:31
+Last Updated: 2026-11-17 01:21
 
 ## 1. Architecture & Key Decisions
 - Main Workspace: `D:\รวมไฟล์\งาน\AntiyCode\Build Agent Ai`
@@ -17,7 +17,9 @@ Last Updated: 2026-11-17 00:31
 - 2026-11-16 23:56 — Added to `AGENTS.md` (approved by nongton): HARD RULE 8 (junction folders are read-only), PROJECT STRUCTURE (`projects/<project-name>/` with per-project `PROJECT_MEMORY.md` + `README.md`), DEFAULT TECH STACK (HTML/CSS/JS -> Vite -> Phaser+Vite -> Godot; must be confirmed in ALIGNMENT).
 - 2026-11-17 00:02 — Added `COMMAND TRIGGER: nongton` to `AGENTS.md` and `.agents/skills/nongton/SKILL.md`: starting a prompt with `nongton` (or `/nongton`) activates the full 6-role Agent AI workflow and allows modifying code/prompts; messages without `nongton` stay in Read-Only consultation mode. Also extracted `PROJECT STRUCTURE` and `DEFAULT TECH STACK` into `.agents/rules/project-standards.md` (`trigger: always_on`) to keep `AGENTS.md` well under the 24,000-byte rule limit.
 - 2026-11-17 00:13 — Installed `Git.MinGit` (v2.56.1) and `Vercel CLI` (v65.16.0). Created `.gitignore` and `.vercelignore` excluding read-only junctions (`Claude-AppData/`, `Gemini-*`), `.backups/`, `.env`, `Gemini.lnk`, and `*.code-workspace`. Initialized local Git repo (`main` branch). Vercel CLI is authenticated (`klakarkhaycturwithy-4698`).
-- 2026-11-17 00:31 — Configured Git `user.name` (`nongton`) and `user.email` locally/globally (email not stored in memory per HARD RULE 6). Created initial local Git commit on `main`. GitHub remote URL pending repository name from nongton.
+- 2026-11-17 00:31 — Configured Git `user.name` (`nongton`) and `user.email` locally/globally (email not stored in memory per HARD RULE 6). Created initial local Git commit on `main`.
+- 2026-11-17 00:47 — Installed `GitHub.cli` (`gh` v2.104.0), authenticated as `klakarkhaycturwithy-sketch`, ran `gh auth setup-git`, connected remote `origin` (`https://github.com/klakarkhaycturwithy-sketch/build-agent-ai.git`), and pushed initial commit `b169204` (`main -> main`) with nongton's approval.
+- 2026-11-17 01:21 — Changed `klakarkhaycturwithy-sketch/build-agent-ai` repository visibility on GitHub to `PUBLIC` as requested by nongton (after verifying zero secrets/tokens in committed tree).
 - Memory split: this root file = user preferences + project index. Project details go to `projects/<project-name>/PROJECT_MEMORY.md`.
 
 ## Project Index
