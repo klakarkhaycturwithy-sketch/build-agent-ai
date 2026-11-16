@@ -1,6 +1,6 @@
 # PROJECT MEMORY - Build Agent Ai (nongton)
 
-Last Updated: 2026-11-17 01:21
+Last Updated: 2026-11-17 01:31
 
 ## 1. Architecture & Key Decisions
 - Main Workspace: `D:\รวมไฟล์\งาน\AntiyCode\Build Agent Ai`
@@ -20,10 +20,12 @@ Last Updated: 2026-11-17 01:21
 - 2026-11-17 00:31 — Configured Git `user.name` (`nongton`) and `user.email` locally/globally (email not stored in memory per HARD RULE 6). Created initial local Git commit on `main`.
 - 2026-11-17 00:47 — Installed `GitHub.cli` (`gh` v2.104.0), authenticated as `klakarkhaycturwithy-sketch`, ran `gh auth setup-git`, connected remote `origin` (`https://github.com/klakarkhaycturwithy-sketch/build-agent-ai.git`), and pushed initial commit `b169204` (`main -> main`) with nongton's approval.
 - 2026-11-17 01:21 — Changed `klakarkhaycturwithy-sketch/build-agent-ai` repository visibility on GitHub to `PUBLIC` as requested by nongton (after verifying zero secrets/tokens in committed tree).
+- 2026-11-17 01:27 — Verified `test-nongton-web` test run (PASS: `AGENTS.md` + `.agents/` worked cleanly, built `resume-landing` following Clean Code and project standards).
+- 2026-11-17 01:31 — Per nongton's architectural decision, `Build Agent Ai` is kept strictly for Agent AI development; `test-nongton-web` remains separate outside this repository, and the temporary copy in `projects/resume-landing/` was moved to `_to_delete/resume-landing-imported-20261117/` (not deleted).
 - Memory split: this root file = user preferences + project index. Project details go to `projects/<project-name>/PROJECT_MEMORY.md`.
 
 ## Project Index
-- (none yet)
+- (none yet — `Build Agent Ai` stays clean for Agent AI development; standalone test `test-nongton-web` is kept separate)
 
 ## 2. Data Structures & APIs
 - Pending first feature/project specification from nongton.
@@ -40,7 +42,7 @@ Last Updated: 2026-11-17 01:21
 - Name: `nongton` (Student, beginner programmer, enjoys gaming and web development, usually works from ~19:00 onwards).
 - Hardware & OS: Windows, AMD Ryzen 5 5600, 32 GB RAM, AMD Radeon RX Vega GPU (Strictly NO CUDA/NVIDIA-only tools).
 - Tools & Platforms: Antigravity IDE, GitHub, Vercel, Netlify, Google Drive, Figma.
-- Design Style: Clean, simple, high quality (เรียบง่ายแต่มีคุณภาพ).
+- Design Style: Clean, simple, high quality (เรียบง่ายแต่มีคุณภาพ). Confirmed preference from `resume-landing` test: **Minimal Light** aesthetic (warm cream `#FAF8F5` background, white cards `#FFFFFF`, deep teal `#0F766E` accent, Inter + Noto Sans Thai fonts) and **bilingual TH/EN toggle** on personal web pages.
 - Communication Style:
   - Friendly, direct, easy to understand, no emojis.
   - Explain in Thai; write code, filenames, and code comments in English.
