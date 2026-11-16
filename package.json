@@ -1,0 +1,38 @@
+{
+  "name": "nongton",
+  "version": "1.0.0",
+  "description": "nongton 6-Role Game & Web Development AI Agent System (Lead > Deputy > UX/UI > Backend > Frontend > QA)",
+  "bin": {
+    "nongton": "./bin/cli.js",
+    "nongton-agent": "./bin/cli.js"
+  },
+  "files": [
+    "bin/",
+    ".agents/",
+    "AGENTS.md",
+    ".gitignore",
+    ".vercelignore",
+    "README.md"
+  ],
+  "scripts": {
+    "status": "node ./bin/cli.js status",
+    "test": "node ./bin/cli.js --version && node ./bin/cli.js status"
+  },
+  "keywords": [
+    "nongton",
+    "ai-agent",
+    "antigravity",
+    "game-dev",
+    "web-dev"
+  ],
+  "author": "nongton <https://github.com/klakarkhaycturwithy-sketch>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klakarkhaycturwithy-sketch/build-agent-ai.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
+

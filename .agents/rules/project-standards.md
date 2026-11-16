@@ -2,28 +2,30 @@
 trigger: always_on
 ---
 
-# PROJECT STRUCTURE & DEFAULT TECH STACK (nongton Workspace Standards)
+# PROJECT STRUCTURE, DEFAULT TECH STACK & DESIGN SYSTEM (nongton Standards)
 
 # PROJECT STRUCTURE (โครงสร้างโฟลเดอร์)
 ทุกโปรเจกต์อยู่ในโฟลเดอร์ย่อยของตัวเองใต้ `projects/` ห้ามวางไฟล์งานปนกันที่ root
 
 ```text
-Build Agent Ai/
+<workspace-root>/
 ├── AGENTS.md                 กฎหลักของทีมและตัวแปรคำสั่ง nongton
 ├── PROJECT_MEMORY.md         memory กลาง: ความชอบของผู้ใช้ + รายชื่อโปรเจกต์ทั้งหมด
 ├── .agents/
 │   ├── rules/
-│   │   └── project-standards.md  โครงสร้างโฟลเดอร์และเครื่องมือเริ่มต้น (ไฟล์นี้)
+│   │   └── project-standards.md  โครงสร้างโฟลเดอร์, เครื่องมือ, และดีไซน์เริ่มต้น (ไฟล์นี้)
 │   └── skills/
-│       └── nongton/SKILL.md      ทักษะตัวแปรคำสั่งหลัก nongton
+│       ├── nongton/SKILL.md       ทักษะตัวแปรคำสั่งหลัก nongton (6-role workflow)
+│       ├── game-builder/SKILL.md  ทักษะสร้างเกม 2D / เว็บเกม (รองรับ AMD RX Vega)
+│       ├── deploy-helper/SKILL.md ทักษะตรวจความปลอดภัยและส่งขึ้น GitHub / Vercel
+│       └── code-coach/SKILL.md    ทักษะอธิบายโค้ดและสอนหลักคิดสำหรับมือใหม่
 ├── projects/
-│   └── <project-name>/       หนึ่งโฟลเดอร์ต่อหนึ่งโปรเจกต์
+│   └── <project-name>/       หนึ่งโฟลเดอร์ต่อหนึ่งโปรเจกต์ (ภาษาอังกฤษตัวเล็กคั่นด้วยขีด)
 │       ├── PROJECT_MEMORY.md memory เฉพาะโปรเจกต์: สถาปัตยกรรม, ข้อมูล, บัค
 │       ├── README.md         วิธีเปิด/รันโปรเจกต์แบบสั้นๆ
 │       └── ...               ไฟล์งาน
 ├── .backups/                 สำรองไฟล์ก่อนแก้ (YYYYMMDD-HHMM/)
-├── _to_delete/               ไฟล์ที่เลิกใช้ (แทนการลบ)
-└── Claude-AppData/ Gemini-*/ ทางลัด อ่านอย่างเดียว (ดู HARD RULES ข้อ 8)
+└── _to_delete/               ไฟล์ที่เลิกใช้ (แทนการลบ)
 ```
 
 - ชื่อโฟลเดอร์โปรเจกต์: ภาษาอังกฤษตัวเล็ก คั่นด้วยขีด เช่น `snake-game`, `portfolio-site` (ไม่ใช้ภาษาไทยหรือช่องว่าง เพราะเครื่องมือบางตัวอ่านพาธแบบนี้ผิด)
@@ -37,10 +39,16 @@ Build Agent Ai/
 |---|---|---|
 | เว็บเล็ก (1–3 หน้า, landing, portfolio) | HTML + CSS + JavaScript ล้วน ไม่ต้อง build | งานส่วนใหญ่ เปิดไฟล์ในเบราว์เซอร์ได้ทันที |
 | เว็บที่มีหลายหน้า/ข้อมูลเยอะ | Vite + JavaScript (เพิ่ม React เฉพาะเมื่อจำเป็นจริง) | เมื่อ HTML ล้วนเริ่มจัดการยาก |
-| เกม 2D เล่นบนเบราว์เซอร์ | Phaser + Vite | เกมที่อยากแชร์ลิงก์ให้เพื่อนเล่นผ่าน Netlify/Vercel |
+| เกม 2D เล่นบนเบราว์เซอร์ | HTML5 Canvas หรือ Phaser + Vite | เกมที่อยากเปิดเล่นทันทีหรือแชร์ผ่าน Vercel/Netlify |
 | เกมที่อยากทำเป็นโปรแกรมติดตั้ง หรือ 3D | Godot | เมื่อผู้ใช้อยากได้เกมแบบ standalone |
 
 - ทุกเครื่องมือต้องรันบน Windows + AMD GPU ได้ ห้ามพึ่ง CUDA/NVIDIA
 - ก่อนติดตั้ง ให้ตรวจเวอร์ชันเสถียรล่าสุดจากเอกสารทางการ ห้ามเดาเวอร์ชัน
 - เลือกตัวที่ง่ายที่สุดที่ทำงานได้ก่อน ค่อยขยับไปตัวที่ซับซ้อนขึ้นเมื่อมีเหตุผลชัดเจน และอธิบายเหตุผลให้ผู้ใช้ฟัง
 
+# DEFAULT DESIGN SYSTEM (สไตล์ดีไซน์เริ่มต้น)
+เมื่อสร้างหน้าเว็บและผู้ใช้ไม่ได้ระบุโทนสีอื่น ให้ใช้โทน **Minimal Light** ที่ผู้ใช้ชอบเป็นค่าเริ่มต้น:
+- สีพื้นหลังหลัก (`--bg-page`): `#FAF8F5` (ครีมอุ่น สบายตา)
+- สีพื้นหลังการ์ด (`--bg-surface`): `#FFFFFF` | สีเน้น (`--accent`): `#0F766E` (เขียวอมฟ้าเข้ม)
+- ฟอนต์: `"Inter", "Noto Sans Thai", sans-serif`
+- รองรับปุ่มสลับ 2 ภาษา (`TH` / `EN`) ด้วย `data-i18n` สำหรับเว็บแนะนำตัวหรือพอร์ตโฟลิโอ

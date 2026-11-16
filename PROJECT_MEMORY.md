@@ -1,6 +1,6 @@
 # PROJECT MEMORY - Build Agent Ai (nongton)
 
-Last Updated: 2026-11-17 01:31
+Last Updated: 2026-11-17 01:41
 
 ## 1. Architecture & Key Decisions
 - Main Workspace: `D:\รวมไฟล์\งาน\AntiyCode\Build Agent Ai`
@@ -22,6 +22,7 @@ Last Updated: 2026-11-17 01:31
 - 2026-11-17 01:21 — Changed `klakarkhaycturwithy-sketch/build-agent-ai` repository visibility on GitHub to `PUBLIC` as requested by nongton (after verifying zero secrets/tokens in committed tree).
 - 2026-11-17 01:27 — Verified `test-nongton-web` test run (PASS: `AGENTS.md` + `.agents/` worked cleanly, built `resume-landing` following Clean Code and project standards).
 - 2026-11-17 01:31 — Per nongton's architectural decision, `Build Agent Ai` is kept strictly for Agent AI development; `test-nongton-web` remains separate outside this repository, and the temporary copy in `projects/resume-landing/` was moved to `_to_delete/resume-landing-imported-20261117/` (not deleted).
+- 2026-11-17 01:41 — Built `nongton` v1.0.0 CLI (`package.json`, `bin/cli.js`, `README.md`) linked globally via `npm link` so `npx nongton init` / `npx nongton status` / `npx nongton update` works in any folder. Added 3 new skills in `.agents/skills/` (`game-builder`, `deploy-helper`, `code-coach`) and updated `AGENTS.md` and `.agents/rules/project-standards.md` with the Minimal Light default design system.
 - Memory split: this root file = user preferences + project index. Project details go to `projects/<project-name>/PROJECT_MEMORY.md`.
 
 ## Project Index
