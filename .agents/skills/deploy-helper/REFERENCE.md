@@ -5,3 +5,4 @@
 - คู่มือฉบับเต็มด้านความปลอดภัย ลิขสิทธิ์ (`COPY GATE`) และการส่งงานขึ้น GitHub / Vercel อยู่ที่:
   `../nongton/references/deploy-security.md`
 - วิธีเรียกใช้งาน: พิมพ์ `/nongton <คำสั่งเซฟงานหรือเอาขึ้น GitHub/Vercel>` ได้ทันที
+

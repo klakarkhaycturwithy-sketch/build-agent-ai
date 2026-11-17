@@ -18,14 +18,14 @@ function formatTimestamp(nowDate) {
 }
 
 function buildStarterMemory(isoDateStr) {
-  return `# PROJECT MEMORY (nongton Workspace — Studio v1.2)
+  return `# PROJECT MEMORY (nongton Workspace — Multifaceted Personal Assistant v1.3)
 
 Last Updated: ${isoDateStr}
 
 ## 1. Architecture & Key Decisions
-- Unified Command Trigger: Use \`/nongton <คำสั่ง>\` (or \`nongton <คำสั่ง>\`) for all tasks (Game Dev, Web Dev, Code Coach, Unblock Mode, Git/Vercel Deploy, and Prompt/Memory updates).
-- Team Workflow: 6 sequential roles with QA Gates: \`Lead > Deputy > Design UX/UI > Backend > Frontend > QA\`
-- Dual Game Engines: Supports both **A. Roblox Studio (Luau + Rojo)** and **B. Godot Engine (GDScript)** alongside Web (\`HTML/CSS/JS\`, \`Vite\`).
+- Core Identity: Multifaceted Personal Assistant AI Agent with deep expertise across diverse domains and an integrated 6-role team for thorough research and information verification.
+- Unified Command Trigger: Use \`/nongton <คำสั่ง>\` (or \`nongton <คำสั่ง>\`) for all tasks (Deep Research, Fact Verification, Project Planning, Web/Software Dev, Teaching/Unblock Mode, and Git/Vercel Deploy).
+- Team Workflow: 6 sequential roles with QA Gates: \`Lead > Deputy/Research > Design/Structure > Backend/Analysis > Frontend/Presentation > QA/Fact-Checking\`
 - Backup Policy: Back up any file to \`.backups/YYYYMMDD-HHMM/\` before editing. Never delete files; move obsolete files to \`_to_delete/\`.
 
 ## 2. User Profile & Preferences (nongton)
@@ -178,11 +178,12 @@ function buildStatusChecks(targetDir) {
     ["Rule: game-dev-workflow (6-10)", path.join(targetDir, ".agents", "rules", "game-dev-workflow-decisions.md")],
     ["Rule: game-dev-qa-kickoff (11-20)", path.join(targetDir, ".agents", "rules", "game-dev-qa-kickoff.md")],
     ["Unified Skill: /nongton", path.join(targetDir, ".agents", "skills", "nongton", "SKILL.md")],
-    ["Module: game-studio-v1.2 (Roblox+Godot)", path.join(refDir, "game-studio-v1.2.md")],
+    ["Module: research-verification", path.join(refDir, "research-verification.md")],
     ["Module: web-studio (Minimal Light)", path.join(refDir, "web-studio.md")],
     ["Module: code-coach-unblock", path.join(refDir, "code-coach-unblock.md")],
     ["Module: deploy-security", path.join(refDir, "deploy-security.md")],
     ["Module: session-manager", path.join(refDir, "session-manager.md")],
+    ["Module: game-studio-v1.2 (Roblox+Godot)", path.join(refDir, "game-studio-v1.2.md")],
     ["Folder: skills/game-builder", path.join(targetDir, ".agents", "skills", "game-builder", "REFERENCE.md")],
     ["Folder: skills/deploy-helper", path.join(targetDir, ".agents", "skills", "deploy-helper", "REFERENCE.md")],
     ["Folder: skills/code-coach", path.join(targetDir, ".agents", "skills", "code-coach", "REFERENCE.md")],
@@ -218,15 +219,15 @@ function runSmartSingleCommand(targetDir) {
 
 function printHelpBanner() {
   console.log(`
-nongton v${PACKAGE_META.version} — All-in-One 6-Role Game & Web Development AI Agent Studio
+nongton v${PACKAGE_META.version} — Multifaceted Personal Assistant AI Agent (6-Role Research, Verification & Execution Team)
 
 Single-Command Usage (Recommended):
-  npx nongton               Auto-backup, install/update all rules + Unified /nongton skill + game docs, and verify status
+  npx nongton               Auto-backup, install/update all rules + Unified /nongton assistant + docs, and verify status
 
 Optional Subcommands:
   npx nongton init          Install without overwriting existing files
   npx nongton update        Back up existing rules to .backups/ and update to latest templates
-  npx nongton status        Check installed nongton rules, unified skill modules, and game docs
+  npx nongton status        Check installed nongton rules, unified skill modules, and docs
   npx nongton --version     Print version
 `);
 }

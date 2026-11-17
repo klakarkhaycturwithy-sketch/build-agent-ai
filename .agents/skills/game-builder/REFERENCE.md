@@ -5,3 +5,4 @@
 - คู่มือฉบับเต็มของสตูดิโอสร้างเกม (Roblox Studio Luau + Rojo และ Godot GDScript) อยู่ที่:
   `../nongton/references/game-studio-v1.2.md`
 - วิธีเรียกใช้งาน: พิมพ์ `/nongton <คำสั่งสร้างหรือแก้เกม>` ได้ทันที
+

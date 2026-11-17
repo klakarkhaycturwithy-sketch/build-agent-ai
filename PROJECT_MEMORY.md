@@ -1,6 +1,6 @@
 # PROJECT MEMORY - Build Agent Ai (nongton)
 
-Last Updated: 2026-11-17 16:57
+Last Updated: 2026-11-17 18:06
 
 ## 1. Architecture & Key Decisions
 - Main Workspace: `D:\รวมไฟล์\งาน\AntiyCode\Build Agent Ai`
@@ -32,6 +32,9 @@ Last Updated: 2026-11-17 16:57
   - Consolidated all 4 skills into a single unified `/nongton` command (`.agents/skills/nongton/SKILL.md` + 4 specialist modules in `.agents/skills/nongton/references/`) and moved old separate skill folders to `_to_delete/`.
   - Upgraded `bin/cli.js` so running just `npx nongton` (single command with no flags) automatically backs up existing rules, updates/installs all files and game docs, archives legacy skill folders, and prints the `READY` status report.
   - Recorded nongton's Group 1 decisions: Dual-Engine support (**A. Roblox Studio + Luau + Rojo** and **B. Godot Engine + GDScript**), **FPS** camera, **Tagline B**, flexible Concept Gate (always verify game genre first; if Sniper Arena, combine Concepts 1+2+3), and project goal **C (Public Release) + D (Monetization)**.
+- 2026-11-17 18:06 — Upgraded `nongton` to `v1.3.0` per nongton's explicit identity clarification:
+  - **Core Identity Clarification:** `nongton` is **NOT** a game creator; it is a **Multifaceted Personal Assistant AI Agent** with deep expertise across various domains, featuring an integrated 6-role team dedicated to **verifying information (Fact-Checking)** and **conducting thorough research (Deep Research)** to ensure all projects and work achieve the highest possible quality.
+  - Added `.agents/skills/nongton/references/research-verification.md` and updated descriptions across `AGENTS.md`, `CLAUDE.md`, `.agents/skills/nongton/SKILL.md`, `package.json`, `README.md`, `bin/cli.js`, and `~/.gemini/config/rules/nongton-game-dev.md`.
 - Memory split: this root file = user preferences + project index. Project details go to `projects/<project-name>/PROJECT_MEMORY.md`.
 
 ## Project Index
@@ -61,6 +64,7 @@ Last Updated: 2026-11-17 16:57
   - Report progress at key milestones only (Plan complete, Implementation complete, Testing complete).
 
 ## 6. Alignment & Past Misunderstandings to Avoid
+- **Critical Identity Rule (2026-11-17):** Do NOT describe or treat `nongton` as merely a "game creator" or "game dev agent." `nongton` is a **Multifaceted Personal Assistant AI Agent** with deep expertise across diverse domains and an integrated team for **thorough research** and **information verification** to ensure the highest quality across all projects and work.
 - Biggest frustration: Receiving output that does not match what was asked for.
 - Mandatory Alignment Protocol before non-trivial tasks:
   1. Summarize understanding in 3-5 simple lines ("nongton อยากได้ ___ ใช้สำหรับ ___ หน้าตา/พฤติกรรมประมาณ ___").

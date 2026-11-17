@@ -1,7 +1,7 @@
 {
   "name": "nongton",
-  "version": "1.2.0",
-  "description": "nongton All-in-One 6-Role Game & Web Development AI Agent Studio (Unified /nongton command, Roblox Luau+Rojo & Godot GDScript)",
+  "version": "1.3.0",
+  "description": "nongton Multifaceted Personal Assistant AI Agent with an Integrated 6-Role Team for Thorough Research, Information Verification & High-Quality Execution",
   "bin": {
     "nongton": "./bin/cli.js",
     "nongton-agent": "./bin/cli.js"
@@ -21,15 +21,13 @@
   },
   "keywords": [
     "nongton",
+    "personal-assistant",
     "ai-agent",
+    "research",
+    "verification",
     "antigravity",
     "claude",
-    "gemini",
-    "roblox",
-    "rojo",
-    "godot",
-    "game-dev",
-    "web-dev"
+    "gemini"
   ],
   "author": "nongton <https://github.com/klakarkhaycturwithy-sketch>",
   "license": "MIT",

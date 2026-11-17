@@ -14,17 +14,19 @@ trigger: always_on
 ├── .agents/
 │   ├── rules/
 │   │   ├── project-standards.md           โครงสร้างโฟลเดอร์, เครื่องมือ, และดีไซน์เริ่มต้น (ไฟล์นี้)
-│   │   ├── game-dev-master.md             Game Dev Master Prompt v1.1 (ข้อ 1–5: Role, Brief, Copy/Tech Gate)
-│   │   ├── game-dev-workflow-decisions.md Game Dev Master Prompt v1.1 (ข้อ 6–10: Rules, Spec Card, Open Decisions)
-│   │   └── game-dev-qa-kickoff.md         Game Dev Master Prompt v1.1 (ข้อ 11–20: Design, MVP 7 วัน, QA, Kickoff)
+│   │   ├── game-dev-master.md             มาตรฐานคุณภาพ Spec Card / Copy Gate / โมดูลเสริมด้านเอนจิน (ข้อ 1–5)
+│   │   ├── game-dev-workflow-decisions.md มาตรฐานความปลอดภัยข้อมูล / สายงาน 6 บทบาท (ข้อ 6–10)
+│   │   └── game-dev-qa-kickoff.md         มาตรฐาน QA Verification Labels / Teaching & Unblock Mode (ข้อ 11–20)
 │   └── skills/
 │       └── nongton/
-│           ├── SKILL.md                   คำสั่งเดียวรวมทุกความสามารถ (/nongton All-in-One Router v1.2)
+│           ├── SKILL.md                   คำสั่งเดียวรวมทุกความสามารถ (/nongton Multifaceted Personal Assistant v1.3)
 │           └── references/                คลังความเชี่ยวชาญย่อยที่ /nongton ดึงใช้อัตโนมัติ
-│               ├── game-studio-v1.2.md    สตูดิโอสร้างเกม (Roblox Luau + Rojo และ Godot GDScript)
-│               ├── web-studio.md          สตูดิโอสร้างเว็บ (Minimal Light 2 ภาษา TH/EN)
-│               ├── code-coach-unblock.md  โหมดสอนโค้ดมือใหม่และปลดล็อกเมื่อตัน (Teaching & Unblock)
-│               └── deploy-security.md     ตรวจความปลอดภัย ลิขสิทธิ์ กฎรายได้ และส่งขึ้น GitHub/Vercel
+│               ├── research-verification.md ค้นคว้าวิจัยเชิงลึกและตรวจสอบความถูกต้องของข้อมูล (Deep Research & Fact-Checking)
+│               ├── web-studio.md            ออกแบบและพัฒนาเว็บไซต์/ระบบ (Minimal Light 2 ภาษา TH/EN)
+│               ├── code-coach-unblock.md    ที่ปรึกษาสอนหลักคิดและปลดล็อกเมื่อตัน (Teaching & Unblock)
+│               ├── deploy-security.md       ตรวจความปลอดภัย ลิขสิทธิ์ และส่งงานขึ้น GitHub/Vercel
+│               ├── session-manager.md       จัดการความจำ เซสชัน และระบบสำรองไฟล์ (.backups/)
+│               └── game-studio-v1.2.md      โมดูลเสริมเฉพาะเมื่อได้รับโจทย์ด้านอินเทอร์แอคทีฟ/เอนจิน
 ├── projects/
 │   └── <project-name>/       หนึ่งโฟลเดอร์ต่อหนึ่งโปรเจกต์ (ภาษาอังกฤษตัวเล็กคั่นด้วยขีด)
 │       ├── PROJECT_MEMORY.md memory เฉพาะโปรเจกต์: สถาปัตยกรรม, ข้อมูล, บัค
