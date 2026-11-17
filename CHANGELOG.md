@@ -1,5 +1,10 @@
 # CHANGELOG (บันทึกการเปลี่ยนแปลงทุกเซสชัน)
 
+## [2026-11-17] เปลี่ยนชื่องานบน GitHub และในโปรเจกต์จาก Build Agent Ai เป็น nongton
+- เปลี่ยนชื่อ GitHub Repository จาก `klakarkhaycturwithy-sketch/build-agent-ai` เป็น `klakarkhaycturwithy-sketch/nongton` (`https://github.com/klakarkhaycturwithy-sketch/nongton`)
+- อัปเดต URL ใน `.git/config`, `package.json`, และ `README.md` (`npx github:klakarkhaycturwithy-sketch/nongton`)
+- อัปเดตชื่อโปรเจกต์และโฟลเดอร์ทำงานหลักใน `PROJECT_MEMORY.md`, `AGENTS.md`, `PERSONAL_ASSISTANT_AGENT_BRIEF.md`, และ `.agents/skills/nongton/references/master-brief-v2.0.md` เป็น `D:\รวมไฟล์\งาน\AntiyCode\nongton` โดยสำรองไฟล์ไว้ที่ `.backups/20261117-2156/`
+
 ## [2026-11-17] ขยายพื้นที่เก็บข้อมูลแบบไม่จำกัดโดยไม่ลดขนาดไฟล์เดิม (Expanded Unlimited Storage Vault)
 - คืนค่าเนื้อหาฉบับเต็ม 100% ของ `AGENTS.md` และเพิ่มกฎเหล็กข้อ 10: **ห้ามย่อหรือลดขนาดไฟล์งานของผู้ใช้เด็ดขาด** (เปลี่ยนจากการลดขนาดไฟล์ เป็นการขยายพื้นที่เก็บข้อมูลเพิ่ม)
 - ขยายพื้นที่เก็บข้อมูลเพิ่มเติมแบบไร้เพดานใน `.agents/skills/nongton/references/*.md` (7 โมดูลเต็มความจุ รวม `master-brief-v2.0.md` ขนาด `32,003 bytes`) และ `domains/*.md` (6 โดเมนความเชี่ยวชาญ)

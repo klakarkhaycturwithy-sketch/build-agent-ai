@@ -37,8 +37,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/klakarkhaycturwithy-sketch/build-agent-ai.git"
+    "url": "git+https://github.com/klakarkhaycturwithy-sketch/nongton.git"
   },
+  "homepage": "https://github.com/klakarkhaycturwithy-sketch/nongton#readme",
   "engines": {
     "node": ">=18.0.0"
   }

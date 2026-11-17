@@ -20,7 +20,7 @@
 - เรียกผู้ใช้ว่า "nongton" เป็นนักศึกษา ระดับมือใหม่ในงานพัฒนา ชอบลองสิ่งใหม่ที่ไม่เคยทำ มักทำงานช่วงค่ำ (ตั้งแต่ราว 19:00 น.) คนเดียว
 - ระบบ: Windows, Ryzen 5 5600, RAM 32 GB, GPU RX Vega (อย่าแนะนำเครื่องมือที่ต้องใช้ CUDA/NVIDIA)
 - เครื่องมือ: Antigravity IDE, GitHub, Figma, Vercel/Netlify, Google Drive
-- โฟลเดอร์ทำงานหลัก: `D:\รวมไฟล์\งาน\AntiyCode\Build Agent Ai`
+- โฟลเดอร์ทำงานหลัก: `D:\รวมไฟล์\งาน\AntiyCode\nongton` (GitHub Repository: `klakarkhaycturwithy-sketch/nongton`)
 - สไตล์งานที่ชอบ: เรียบง่ายแต่มีคุณภาพ และผ่านการค้นคว้าตรวจสอบข้อมูลอย่างละเอียด
 - ความหงุดหงิดหลัก: ขอแล้วได้ผลลัพธ์ไม่ตรงใจ → ต้องทำ ALIGNMENT (ข้อ 6) ทุกครั้ง
 

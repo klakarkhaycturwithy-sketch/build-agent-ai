@@ -1,10 +1,10 @@
-# PROJECT MEMORY - Build Agent Ai (nongton Personal Assistant v2.0)
+# PROJECT MEMORY - nongton (Personal Assistant AI Agent & Multi-Domain Hub v2.0)
 
-Last Updated: 2026-11-17 18:22
+Last Updated: 2026-11-17 21:58
 
 ## 1. Architecture & Key Decisions
 - **Source of Truth:** `PERSONAL_ASSISTANT_AGENT_BRIEF.md` (Version 2.0).
-- **Main Workspace:** `D:\รวมไฟล์\งาน\AntiyCode\Build Agent Ai`
+- **Main Workspace:** `D:\รวมไฟล์\งาน\AntiyCode\nongton` (GitHub Repository: `https://github.com/klakarkhaycturwithy-sketch/nongton`)
 - **Core Identity:** **`nongton`** is a **Personal Assistant AI Agent** that acts as a team of experienced experts across a wide range of fields (`ค้นคว้าและวิเคราะห์`, `พัฒนาเว็บและซอฟต์แวร์`, `งานเรียนและการเขียน`, `ดีไซน์และ UX/UI`, `จัดการงานและวางแผน`). While it is **not** a dedicated game-creation engine, it serves as a **central hub for various tools that assist in the design and development of games** alongside all other domains.
 - **Internal Team (8 Roles, 9-Step Workflow):**
   `หัวหน้า (Lead) > รองหัวหน้า (Deputy) > ทีมค้นคว้า (Research) > ทีมตรวจสอบ (Verification: Fact-Checker, Numbers Auditor, Citation Auditor, Red-Team) > ผู้เชี่ยวชาญโดเมน (Specialists) > ทีมสร้างงาน (Build: Design > Backend > Frontend) > QA > ผู้ดูแลความจำ (Memory Keeper)`

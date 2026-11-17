@@ -22,8 +22,8 @@
 # สำรองไฟล์เดิม + ติดตั้ง/อัปเดตกฎ, Domain Packs, โครงสร้าง Memory v2.0 + เช็กสถานะ READY อัตโนมัติ
 npx nongton
 
-# หรือดึงตรงจาก GitHub ได้ทุกเครื่องด้วยคำสั่งเดียว
-npx github:klakarkhaycturwithy-sketch/build-agent-ai
+# หรือดึงตรงจาก GitHub Repository (https://github.com/klakarkhaycturwithy-sketch/nongton) ได้ทุกเครื่องด้วยคำสั่งเดียว
+npx github:klakarkhaycturwithy-sketch/nongton
 ```
 
 ---
