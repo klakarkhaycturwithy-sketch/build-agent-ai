@@ -1,6 +1,6 @@
 # PROJECT MEMORY - Build Agent Ai (nongton)
 
-Last Updated: 2026-11-17 01:41
+Last Updated: 2026-11-17 16:35
 
 ## 1. Architecture & Key Decisions
 - Main Workspace: `D:\รวมไฟล์\งาน\AntiyCode\Build Agent Ai`
@@ -23,6 +23,11 @@ Last Updated: 2026-11-17 01:41
 - 2026-11-17 01:27 — Verified `test-nongton-web` test run (PASS: `AGENTS.md` + `.agents/` worked cleanly, built `resume-landing` following Clean Code and project standards).
 - 2026-11-17 01:31 — Per nongton's architectural decision, `Build Agent Ai` is kept strictly for Agent AI development; `test-nongton-web` remains separate outside this repository, and the temporary copy in `projects/resume-landing/` was moved to `_to_delete/resume-landing-imported-20261117/` (not deleted).
 - 2026-11-17 01:41 — Built `nongton` v1.0.0 CLI (`package.json`, `bin/cli.js`, `README.md`) linked globally via `npm link` so `npx nongton init` / `npx nongton status` / `npx nongton update` works in any folder. Added 3 new skills in `.agents/skills/` (`game-builder`, `deploy-helper`, `code-coach`) and updated `AGENTS.md` and `.agents/rules/project-standards.md` with the Minimal Light default design system.
+- 2026-11-17 16:35 — Upgraded `nongton` to `v1.1.0` with **GAME DEVELOPMENT AGENT — MASTER PROMPT v1.1** (approved by nongton):
+  - Added full 20-section Game Dev Master Prompt v1.1 across `.agents/rules/game-dev-master.md` (1–5), `.agents/rules/game-dev-workflow-decisions.md` (6–10), and `.agents/rules/game-dev-qa-kickoff.md` (11–20), keeping every rule file strictly under the 24,000-byte Antigravity limit.
+  - Updated `.agents/skills/game-builder/SKILL.md` and `.agents/skills/nongton/SKILL.md` for v1.1 studio gates (Spec Card, Copy Gate, Technology Decision Gate, Concept Gate, QA verification labels, Teaching Mode).
+  - Added `CLAUDE.md` (Claude Code/Desktop bridge) and `~/.gemini/config/rules/nongton-game-dev.md` (Gemini global bridge).
+  - Added `--game` flag to `bin/cli.js` (`npx nongton init --game` / `npx nongton update --game`) to scaffold `DECISIONS.md`, `GDD.md`, `BACKLOG.md`, `CHANGELOG.md`, `ASSETS.md`, and `TESTLOG.md`.
 - Memory split: this root file = user preferences + project index. Project details go to `projects/<project-name>/PROJECT_MEMORY.md`.
 
 ## Project Index

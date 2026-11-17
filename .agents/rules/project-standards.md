@@ -13,12 +13,15 @@ trigger: always_on
 ├── PROJECT_MEMORY.md         memory กลาง: ความชอบของผู้ใช้ + รายชื่อโปรเจกต์ทั้งหมด
 ├── .agents/
 │   ├── rules/
-│   │   └── project-standards.md  โครงสร้างโฟลเดอร์, เครื่องมือ, และดีไซน์เริ่มต้น (ไฟล์นี้)
+│   │   ├── project-standards.md           โครงสร้างโฟลเดอร์, เครื่องมือ, และดีไซน์เริ่มต้น (ไฟล์นี้)
+│   │   ├── game-dev-master.md             Game Dev Master Prompt v1.1 (ข้อ 1–5: Role, Brief, Copy/Tech Gate)
+│   │   ├── game-dev-workflow-decisions.md Game Dev Master Prompt v1.1 (ข้อ 6–10: Rules, Spec Card, Open Decisions)
+│   │   └── game-dev-qa-kickoff.md         Game Dev Master Prompt v1.1 (ข้อ 11–20: Design, MVP 7 วัน, QA, Kickoff)
 │   └── skills/
-│       ├── nongton/SKILL.md       ทักษะตัวแปรคำสั่งหลัก nongton (6-role workflow)
-│       ├── game-builder/SKILL.md  ทักษะสร้างเกม 2D / เว็บเกม (รองรับ AMD RX Vega)
+│       ├── nongton/SKILL.md       ทักษะตัวแปรคำสั่งหลัก nongton (6-role workflow v1.1)
+│       ├── game-builder/SKILL.md  ทักษะสตูดิโอสร้างเกม (Roblox+Rojo / Godot / Web / Canvas)
 │       ├── deploy-helper/SKILL.md ทักษะตรวจความปลอดภัยและส่งขึ้น GitHub / Vercel
-│       └── code-coach/SKILL.md    ทักษะอธิบายโค้ดและสอนหลักคิดสำหรับมือใหม่
+│       └── code-coach/SKILL.md    ทักษะอธิบายโค้ดและสอนหลักคิดสำหรับมือใหม่ (Teaching & Unblock Mode)
 ├── projects/
 │   └── <project-name>/       หนึ่งโฟลเดอร์ต่อหนึ่งโปรเจกต์ (ภาษาอังกฤษตัวเล็กคั่นด้วยขีด)
 │       ├── PROJECT_MEMORY.md memory เฉพาะโปรเจกต์: สถาปัตยกรรม, ข้อมูล, บัค

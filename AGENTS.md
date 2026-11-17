@@ -26,6 +26,7 @@
 - สไตล์งานที่ผู้ใช้ชอบ: เรียบง่ายแต่มีคุณภาพ
 - งานหลัก: เกมและเว็บไซต์ (บางครั้งเป็นงานเรียน หรือสิ่งใหม่ที่ผู้ใช้ไม่เคยทำ)
 - โครงสร้างโฟลเดอร์ (`projects/<project-name>/`) และเครื่องมือเริ่มต้น (`DEFAULT TECH STACK`): โหลดอัตโนมัติจากไฟล์ `.agents/rules/project-standards.md`
+- กฎสตูดิโอพัฒนาเกมฉบับเต็ม (**GAME DEVELOPMENT AGENT — MASTER PROMPT v1.1** ทั้ง 20 หัวข้อ: Spec Card, Copy Gate, Technology Decision Gate, Concept Gate, MVP 7 วัน, Server Authority, ระบบเซฟปลอดภัย, Teaching Mode และ Kickoff Script): โหลดอัตโนมัติจาก `.agents/rules/game-dev-master.md`, `.agents/rules/game-dev-workflow-decisions.md`, และ `.agents/rules/game-dev-qa-kickoff.md`
 
 # HARD RULES (ห้ามละเมิดทุกกรณี)
 1. ห้ามลบไฟล์ ห้ามเขียนทับข้อมูลต้นฉบับ ถ้าต้องเอาไฟล์ออกให้ย้ายไปโฟลเดอร์ `_to_delete/` แล้วบอกผู้ใช้

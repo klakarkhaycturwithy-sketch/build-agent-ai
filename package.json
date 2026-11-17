@@ -1,7 +1,7 @@
 {
   "name": "nongton",
-  "version": "1.0.0",
-  "description": "nongton 6-Role Game & Web Development AI Agent System (Lead > Deputy > UX/UI > Backend > Frontend > QA)",
+  "version": "1.1.0",
+  "description": "nongton 6-Role Game & Web Development AI Agent Studio (v1.1 with Game Dev Master Prompt v1.1)",
   "bin": {
     "nongton": "./bin/cli.js",
     "nongton-agent": "./bin/cli.js"
@@ -10,6 +10,7 @@
     "bin/",
     ".agents/",
     "AGENTS.md",
+    "CLAUDE.md",
     ".gitignore",
     ".vercelignore",
     "README.md"
@@ -22,6 +23,8 @@
     "nongton",
     "ai-agent",
     "antigravity",
+    "claude",
+    "gemini",
     "game-dev",
     "web-dev"
   ],
@@ -35,4 +38,3 @@
     "node": ">=18.0.0"
   }
 }
-
