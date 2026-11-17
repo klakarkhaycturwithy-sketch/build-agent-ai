@@ -26,9 +26,9 @@ trigger: always_on
 │   ├── rules/
 │   │   └── project-standards.md       โครงสร้างโปรเจกต์และมาตรฐานเริ่มต้น (ไฟล์นี้)
 │   └── skills/
-│       ├── nongton/                   คำสั่งเดียวรวมศูนย์ (/nongton Personal Assistant Hub v2.0)
-│       │   ├── SKILL.md
-│       │   └── references/            คู่มือปฏิบัติการย่อย (research, web, coach, deploy, session, game-hub)
+│       ├── nongton/                   คำสั่งเดียวรวมศูนย์ (/nongton Personal Assistant Hub v2.0 — Method 2 Vault)
+│       │   ├── SKILL.md               ตัวดึงคลังความรู้ไร้เพดานอัตโนมัติ (Unlimited Vault Router)
+│       │   └── references/            คลังคู่มือไร้เพดาน 7 โมดูล (master-brief-v2.0, research, web, coach, deploy, session, game-hub)
 │       ├── game-builder/REFERENCE.md  เชื่อมต่อไปยังศูนย์กลางเครื่องมือเกมของ /nongton
 │       ├── deploy-helper/REFERENCE.md เชื่อมต่อไปยังโมดูลความปลอดภัยและการส่งมอบงานของ /nongton
 │       └── code-coach/REFERENCE.md    เชื่อมต่อไปยังโมดูลสอนหลักคิดและปลดล็อกของ /nongton

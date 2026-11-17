@@ -183,6 +183,7 @@ function buildStatusChecks(targetDir) {
     ["Memory: SOURCES.md", path.join(targetDir, "SOURCES.md")],
     ["Rule: project-standards", path.join(targetDir, ".agents", "rules", "project-standards.md")],
     ["Unified Skill: /nongton", path.join(targetDir, ".agents", "skills", "nongton", "SKILL.md")],
+    ["Ref: master-brief-v2.0 (Unlimited)", path.join(refDir, "master-brief-v2.0.md")],
     ["Ref: research-verification (Claim Ledger)", path.join(refDir, "research-verification.md")],
     ["Ref: web-studio (Minimal Light)", path.join(refDir, "web-studio.md")],
     ["Ref: code-coach-unblock", path.join(refDir, "code-coach-unblock.md")],
