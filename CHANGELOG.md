@@ -1,5 +1,11 @@
 # CHANGELOG (บันทึกการเปลี่ยนแปลงทุกเซสชัน)
 
+## [2026-11-17] ติดตั้งสกิลเสริม using-agent-skills และ vercel-react-best-practices ลงในโปรเจกต์
+- สำรองไฟล์ `skills-lock.json`, `PROJECT_MEMORY.md`, และ `CHANGELOG.md` ไว้ที่ `.backups/20261117-2228/`
+- ติดตั้งสกิล `using-agent-skills` จาก `https://github.com/addyosmani/agent-skills` ลงใน `.agents/skills/using-agent-skills/`
+- ติดตั้งสกิล `vercel-react-best-practices` จาก `https://github.com/vercel-labs/agent-skills` ลงใน `.agents/skills/vercel-react-best-practices/`
+- อัปเดต `skills-lock.json` และบันทึกสถานะใน `PROJECT_MEMORY.md`
+
 ## [2026-11-17] เปลี่ยนชื่องานบน GitHub และในโปรเจกต์จาก Build Agent Ai เป็น nongton
 - เปลี่ยนชื่อ GitHub Repository จาก `klakarkhaycturwithy-sketch/build-agent-ai` เป็น `klakarkhaycturwithy-sketch/nongton` (`https://github.com/klakarkhaycturwithy-sketch/nongton`)
 - อัปเดต URL ใน `.git/config`, `package.json`, และ `README.md` (`npx github:klakarkhaycturwithy-sketch/nongton`)

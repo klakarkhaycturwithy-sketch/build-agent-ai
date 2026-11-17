@@ -12,8 +12,9 @@ Last Updated: 2026-11-17 21:58
   - Mandatory **Claim Ledger** table with 4 confidence labels: `[ยืนยันแล้ว]`, `[น่าจะถูก]`, `[ไม่แน่ใจ]`, `[ยังตรวจไม่ได้]`.
   - 4-tier source reliability hierarchy and 3 verification depth levels (`เบา / ปกติ / เข้ม`).
 - **One-Command Trigger (`/nongton` & `npx nongton` v2.0.0):**
-  - Single chat command `/nongton <คำสั่ง>` routes automatically across all 6 operational reference modules and 6 `domains/*.md` Domain Packs.
-  - Single terminal command `npx nongton` backs up existing files, installs/updates rules, Domain Packs, and root memory files (`PROJECT_MEMORY.md`, `DECISIONS.md`, `BACKLOG.md`, `CHANGELOG.md`, `SOURCES.md`), and verifies all 25 workspace status items.
+  - Single chat command `/nongton <คำสั่ง>` routes automatically across all 7 operational reference modules and 6 `domains/*.md` Domain Packs.
+  - Installed Project Skills in `.agents/skills/` (tracked in `skills-lock.json`): `nongton` (central hub), `using-agent-skills` (`addyosmani/agent-skills`), `vercel-react-best-practices` (`vercel-labs/agent-skills`), `agent-browser`, `executing-plans`, `grill-me`, `web-search`.
+  - Single terminal command `npx nongton` backs up existing files, installs/updates rules, Domain Packs, and root memory files (`PROJECT_MEMORY.md`, `DECISIONS.md`, `BACKLOG.md`, `CHANGELOG.md`, `SOURCES.md`), and verifies all 26 workspace status items.
 - **Archive & Backup Policy:**
   - Back up any file to `.backups/YYYYMMDD-HHMM/` before editing.
   - Never delete files; move obsolete files to `_to_delete/` and deprecated standalone game-prompt files to `_archive/` with the deprecation header `"เลิกใช้ - เป็นเนื้อหาของโปรเจกต์เกม ไม่เกี่ยวกับโปรเจกต์นี้"`.
