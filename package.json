@@ -1,7 +1,7 @@
 {
   "name": "nongton",
-  "version": "1.3.0",
-  "description": "nongton Multifaceted Personal Assistant AI Agent with an Integrated 6-Role Team for Thorough Research, Information Verification & High-Quality Execution",
+  "version": "2.0.0",
+  "description": "nongton Personal Assistant AI Agent & Multi-Domain Expert Central Hub (8-Role Research, Verification & Execution Team + Game Design/Dev Tool Hub)",
   "bin": {
     "nongton": "./bin/cli.js",
     "nongton-agent": "./bin/cli.js"
@@ -9,6 +9,8 @@
   "files": [
     "bin/",
     ".agents/",
+    "domains/",
+    "PERSONAL_ASSISTANT_AGENT_BRIEF.md",
     "AGENTS.md",
     "CLAUDE.md",
     ".gitignore",
@@ -25,6 +27,8 @@
     "ai-agent",
     "research",
     "verification",
+    "multi-domain",
+    "game-dev-hub",
     "antigravity",
     "claude",
     "gemini"

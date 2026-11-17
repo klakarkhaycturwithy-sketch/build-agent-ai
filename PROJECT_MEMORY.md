@@ -1,75 +1,33 @@
-# PROJECT MEMORY - Build Agent Ai (nongton)
+# PROJECT MEMORY - Build Agent Ai (nongton Personal Assistant v2.0)
 
-Last Updated: 2026-11-17 18:06
+Last Updated: 2026-11-17 18:22
 
 ## 1. Architecture & Key Decisions
-- Main Workspace: `D:\รวมไฟล์\งาน\AntiyCode\Build Agent Ai`
-- Coding Standard: Clean Code (Pragmatic Standards: SRP, DRY, KISS, YAGNI, Guard Clauses, max 20 lines/function, self-documenting names)
-- AI Integration:
-  - Connected Claude AppData via Junction (`Claude-AppData`) and `Build-Agent-Claude.code-workspace`
-  - Connected Gemini App, AppData, and Config (`.gemini`) via Junctions (`Gemini-App`, `Gemini-AppData`, `Gemini-Config`) and `Build-Agent-Gemini.code-workspace`
-  - Analyzed `rykerzz-multi-agent` v1.0.0 (installed globally in npm; nongton decided NOT to initialize it inside this workspace root)
-- Team Workflow: 6 sequential roles with QA Gates after each step:
-  `Lead (หัวหน้า) > Deputy (รองหัวหน้า) > Design UX/UI > Backend > Frontend > QA`
-- Backup Policy: Every file modification must first be backed up to `.backups/YYYYMMDD-HHMM/`. Deletions are forbidden; move obsolete files to `_to_delete/`.
-- Team Rules installed permanently as workspace rule file `AGENTS.md` (root). Auto-loaded by Antigravity every session. Source of truth for team behavior; edit only with nongton's approval (backup first).
-- Rule conflict resolved (2026-11-17, approved by nongton): `AGENTS.md` takes precedence over global `GEMINI.md` (no emojis, Thai explanation, 6-role workflow, ALIGNMENT). Useful engineering standards from `GEMINI.md` (Clean Code, security checks, verification) may still be applied when needed.
-- 2026-11-16 23:56 — Added to `AGENTS.md` (approved by nongton): HARD RULE 8 (junction folders are read-only), PROJECT STRUCTURE (`projects/<project-name>/` with per-project `PROJECT_MEMORY.md` + `README.md`), DEFAULT TECH STACK (HTML/CSS/JS -> Vite -> Phaser+Vite -> Godot; must be confirmed in ALIGNMENT).
-- 2026-11-17 00:02 — Added `COMMAND TRIGGER: nongton` to `AGENTS.md` and `.agents/skills/nongton/SKILL.md`: starting a prompt with `nongton` (or `/nongton`) activates the full 6-role Agent AI workflow and allows modifying code/prompts; messages without `nongton` stay in Read-Only consultation mode. Also extracted `PROJECT STRUCTURE` and `DEFAULT TECH STACK` into `.agents/rules/project-standards.md` (`trigger: always_on`) to keep `AGENTS.md` well under the 24,000-byte rule limit.
-- 2026-11-17 00:13 — Installed `Git.MinGit` (v2.56.1) and `Vercel CLI` (v65.16.0). Created `.gitignore` and `.vercelignore` excluding read-only junctions (`Claude-AppData/`, `Gemini-*`), `.backups/`, `.env`, `Gemini.lnk`, and `*.code-workspace`. Initialized local Git repo (`main` branch). Vercel CLI is authenticated (`klakarkhaycturwithy-4698`).
-- 2026-11-17 00:31 — Configured Git `user.name` (`nongton`) and `user.email` locally/globally (email not stored in memory per HARD RULE 6). Created initial local Git commit on `main`.
-- 2026-11-17 00:47 — Installed `GitHub.cli` (`gh` v2.104.0), authenticated as `klakarkhaycturwithy-sketch`, ran `gh auth setup-git`, connected remote `origin` (`https://github.com/klakarkhaycturwithy-sketch/build-agent-ai.git`), and pushed initial commit `b169204` (`main -> main`) with nongton's approval.
-- 2026-11-17 01:21 — Changed `klakarkhaycturwithy-sketch/build-agent-ai` repository visibility on GitHub to `PUBLIC` as requested by nongton (after verifying zero secrets/tokens in committed tree).
-- 2026-11-17 01:27 — Verified `test-nongton-web` test run (PASS: `AGENTS.md` + `.agents/` worked cleanly, built `resume-landing` following Clean Code and project standards).
-- 2026-11-17 01:31 — Per nongton's architectural decision, `Build Agent Ai` is kept strictly for Agent AI development; `test-nongton-web` remains separate outside this repository, and the temporary copy in `projects/resume-landing/` was moved to `_to_delete/resume-landing-imported-20261117/` (not deleted).
-- 2026-11-17 01:41 — Built `nongton` v1.0.0 CLI (`package.json`, `bin/cli.js`, `README.md`) linked globally via `npm link` so `npx nongton init` / `npx nongton status` / `npx nongton update` works in any folder. Added 3 new skills in `.agents/skills/` (`game-builder`, `deploy-helper`, `code-coach`) and updated `AGENTS.md` and `.agents/rules/project-standards.md` with the Minimal Light default design system.
-- 2026-11-17 16:35 — Upgraded `nongton` to `v1.1.0` with **GAME DEVELOPMENT AGENT — MASTER PROMPT v1.1** (approved by nongton):
-  - Added full 20-section Game Dev Master Prompt v1.1 across `.agents/rules/game-dev-master.md` (1–5), `.agents/rules/game-dev-workflow-decisions.md` (6–10), and `.agents/rules/game-dev-qa-kickoff.md` (11–20), keeping every rule file strictly under the 24,000-byte Antigravity limit.
-  - Updated `.agents/skills/game-builder/SKILL.md` and `.agents/skills/nongton/SKILL.md` for v1.1 studio gates (Spec Card, Copy Gate, Technology Decision Gate, Concept Gate, QA verification labels, Teaching Mode).
-  - Added `CLAUDE.md` (Claude Code/Desktop bridge) and `~/.gemini/config/rules/nongton-game-dev.md` (Gemini global bridge).
-  - Added `--game` flag to `bin/cli.js` (`npx nongton init --game` / `npx nongton update --game`) to scaffold `DECISIONS.md`, `GDD.md`, `BACKLOG.md`, `CHANGELOG.md`, `ASSETS.md`, and `TESTLOG.md`.
-- 2026-11-17 16:57 — Upgraded `nongton` to `v1.2.0` (Unified One-Command Agent AI & Locked Group 1 Game Studio Settings):
-  - Consolidated all 4 skills into a single unified `/nongton` command (`.agents/skills/nongton/SKILL.md` + 4 specialist modules in `.agents/skills/nongton/references/`) and moved old separate skill folders to `_to_delete/`.
-  - Upgraded `bin/cli.js` so running just `npx nongton` (single command with no flags) automatically backs up existing rules, updates/installs all files and game docs, archives legacy skill folders, and prints the `READY` status report.
-  - Recorded nongton's Group 1 decisions: Dual-Engine support (**A. Roblox Studio + Luau + Rojo** and **B. Godot Engine + GDScript**), **FPS** camera, **Tagline B**, flexible Concept Gate (always verify game genre first; if Sniper Arena, combine Concepts 1+2+3), and project goal **C (Public Release) + D (Monetization)**.
-- 2026-11-17 18:06 — Upgraded `nongton` to `v1.3.0` per nongton's explicit identity clarification:
-  - **Core Identity Clarification:** `nongton` is **NOT** a game creator; it is a **Multifaceted Personal Assistant AI Agent** with deep expertise across various domains, featuring an integrated 6-role team dedicated to **verifying information (Fact-Checking)** and **conducting thorough research (Deep Research)** to ensure all projects and work achieve the highest possible quality.
-  - Added `.agents/skills/nongton/references/research-verification.md` and updated descriptions across `AGENTS.md`, `CLAUDE.md`, `.agents/skills/nongton/SKILL.md`, `package.json`, `README.md`, `bin/cli.js`, and `~/.gemini/config/rules/nongton-game-dev.md`.
-- Memory split: this root file = user preferences + project index. Project details go to `projects/<project-name>/PROJECT_MEMORY.md`.
+- **Source of Truth:** `PERSONAL_ASSISTANT_AGENT_BRIEF.md` (Version 2.0).
+- **Main Workspace:** `D:\รวมไฟล์\งาน\AntiyCode\Build Agent Ai`
+- **Core Identity:** **`nongton`** is a **Personal Assistant AI Agent** that acts as a team of experienced experts across a wide range of fields (`ค้นคว้าและวิเคราะห์`, `พัฒนาเว็บและซอฟต์แวร์`, `งานเรียนและการเขียน`, `ดีไซน์และ UX/UI`, `จัดการงานและวางแผน`). While it is **not** a dedicated game-creation engine, it serves as a **central hub for various tools that assist in the design and development of games** alongside all other domains.
+- **Internal Team (8 Roles, 9-Step Workflow):**
+  `หัวหน้า (Lead) > รองหัวหน้า (Deputy) > ทีมค้นคว้า (Research) > ทีมตรวจสอบ (Verification: Fact-Checker, Numbers Auditor, Citation Auditor, Red-Team) > ผู้เชี่ยวชาญโดเมน (Specialists) > ทีมสร้างงาน (Build: Design > Backend > Frontend) > QA > ผู้ดูแลความจำ (Memory Keeper)`
+- **Research & Verification System:**
+  - Mandatory **Claim Ledger** table with 4 confidence labels: `[ยืนยันแล้ว]`, `[น่าจะถูก]`, `[ไม่แน่ใจ]`, `[ยังตรวจไม่ได้]`.
+  - 4-tier source reliability hierarchy and 3 verification depth levels (`เบา / ปกติ / เข้ม`).
+- **One-Command Trigger (`/nongton` & `npx nongton` v2.0.0):**
+  - Single chat command `/nongton <คำสั่ง>` routes automatically across all 6 operational reference modules and 6 `domains/*.md` Domain Packs.
+  - Single terminal command `npx nongton` backs up existing files, installs/updates rules, Domain Packs, and root memory files (`PROJECT_MEMORY.md`, `DECISIONS.md`, `BACKLOG.md`, `CHANGELOG.md`, `SOURCES.md`), and verifies all 25 workspace status items.
+- **Archive & Backup Policy:**
+  - Back up any file to `.backups/YYYYMMDD-HHMM/` before editing.
+  - Never delete files; move obsolete files to `_to_delete/` and deprecated standalone game-prompt files to `_archive/` with the deprecation header `"เลิกใช้ - เป็นเนื้อหาของโปรเจกต์เกม ไม่เกี่ยวกับโปรเจกต์นี้"`.
 
-## Project Index
-- (none yet — `Build Agent Ai` stays clean for Agent AI development; standalone test `test-nongton-web` is kept separate)
-
-## 2. Data Structures & APIs
-- Pending first feature/project specification from nongton.
-- Secrets Policy: Never store API keys, tokens, or sensitive values in code or memory. Store only variable names (e.g., `API_KEY_NAME`) and load values from `.env`.
-
-## 3. Bugs Encountered & Fixes
-- None recorded yet.
-
-## 4. Reusable Components & Templates
-- `Build-Agent-Claude.code-workspace`: Multi-folder workspace template for Claude configuration.
-- `Build-Agent-Gemini.code-workspace`: Multi-folder workspace template for Gemini configuration.
-
-## 5. User Profile & Preferences (nongton)
-- Name: `nongton` (Student, beginner programmer, enjoys gaming and web development, usually works from ~19:00 onwards).
-- Hardware & OS: Windows, AMD Ryzen 5 5600, 32 GB RAM, AMD Radeon RX Vega GPU (Strictly NO CUDA/NVIDIA-only tools).
+## 2. User Profile & Preferences (nongton)
+- Name: `nongton` (Student, beginner developer, enjoys trying new things, works around 19:00 onwards).
+- Hardware & OS: Windows, AMD Ryzen 5 5600, 32 GB RAM, AMD Radeon RX Vega GPU (Strictly NO CUDA/NVIDIA tools).
 - Tools & Platforms: Antigravity IDE, GitHub, Vercel, Netlify, Google Drive, Figma.
-- Design Style: Clean, simple, high quality (เรียบง่ายแต่มีคุณภาพ). Confirmed preference from `resume-landing` test: **Minimal Light** aesthetic (warm cream `#FAF8F5` background, white cards `#FFFFFF`, deep teal `#0F766E` accent, Inter + Noto Sans Thai fonts) and **bilingual TH/EN toggle** on personal web pages.
+- Design Style: Clean, simple, high quality (เรียบง่ายแต่มีคุณภาพ) — **Minimal Light** (`#FAF8F5` background, `#FFFFFF` cards, `#0F766E` accent, Inter + Noto Sans Thai, bilingual TH/EN toggle).
 - Communication Style:
-  - Friendly, direct, easy to understand, no emojis.
+  - Friendly, direct, easy to understand, no emojis in body text.
   - Explain in Thai; write code, filenames, and code comments in English.
-  - Always explain technical terms briefly in parentheses and teach the underlying concept briefly.
-  - Always include examples and comparisons when introducing new concepts.
-  - Report progress at key milestones only (Plan complete, Implementation complete, Testing complete).
+  - Explain technical terms briefly in parentheses with examples and comparisons.
 
-## 6. Alignment & Past Misunderstandings to Avoid
-- **Critical Identity Rule (2026-11-17):** Do NOT describe or treat `nongton` as merely a "game creator" or "game dev agent." `nongton` is a **Multifaceted Personal Assistant AI Agent** with deep expertise across diverse domains and an integrated team for **thorough research** and **information verification** to ensure the highest quality across all projects and work.
-- Biggest frustration: Receiving output that does not match what was asked for.
-- Mandatory Alignment Protocol before non-trivial tasks:
-  1. Summarize understanding in 3-5 simple lines ("nongton อยากได้ ___ ใช้สำหรับ ___ หน้าตา/พฤติกรรมประมาณ ___").
-  2. Define testable success criteria ("กดปุ่ม X แล้วเกิด Y").
-  3. Ask clarifying questions in a single batch with options and a recommended choice.
-  4. Wait for confirmation before starting implementation.
-  5. Provide a wireframe or small sample first for visual tasks.
-
+## 3. Alignment & Past Misunderstandings to Avoid
+- **Critical Identity Rule:** `nongton` is a **Personal Assistant AI Agent** acting as experienced experts across a wide range of fields — NOT a game or a dedicated game-creation engine. However, it DOES serve as a **central hub for tools that assist in game design and development** (`domains/game-design-and-dev.md` and `references/game-dev-hub.md`) whenever requested.
+- Always follow `PERSONAL_ASSISTANT_AGENT_BRIEF.md` v2.0 as the highest source of truth.

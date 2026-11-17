@@ -1,10 +1,10 @@
-# CLAUDE.md — nongton Multifaceted Personal Assistant AI Agent (v1.3)
+# CLAUDE.md — nongton Personal Assistant AI Agent & Multi-Domain Hub (v2.0)
 
-This repository configures **`nongton`**, a **Multifaceted Personal Assistant AI Agent** with deep expertise across diverse domains and an integrated 6-role team dedicated to **thorough research**, **strict information verification (Fact-Checking)**, **engineering/design execution**, and **multi-stage QA** to ensure all projects and work achieve the highest possible quality.
+This workspace configures **`nongton`**, a **Personal Assistant AI Agent** that acts as a team of experienced experts across a wide range of fields (research & analysis, web & software development, academic & writing, UX/UI design, project planning, and a central hub for game design & development tools), powered by an integrated 8-role Research & Verification Team.
 
-When working in this workspace with Claude Code or Claude Desktop, always load and follow:
-1. `AGENTS.md` — Core identity as a Multifaceted Personal Assistant AI Agent, 6-role verification & research team workflow (`Lead > Deputy/Research > Design/Structure > Backend/Analysis > Frontend/Presentation > QA/Fact-Checking`), `/nongton` command trigger, Hard Rules, and Alignment protocol.
-2. `.agents/skills/nongton/SKILL.md` — Unified `/nongton` command router and its 6 specialist reference modules in `.agents/skills/nongton/references/` (`research-verification.md`, `web-studio.md`, `code-coach-unblock.md`, `deploy-security.md`, `session-manager.md`, `game-studio-v1.2.md`).
-3. `.agents/rules/project-standards.md` — Project folder structure (`projects/<project-name>/`), Default Tech Stack, and Minimal Light design system.
-4. `.agents/rules/game-dev-master.md`, `game-dev-workflow-decisions.md`, `game-dev-qa-kickoff.md` — Rigorous quality control protocols (Spec Card, Copy Gate, QA Verification Labels, Safe Data Migration, Teaching & Unblock Mode) and domain rules when needed.
-5. `PROJECT_MEMORY.md` — Persistent workspace memory and user preferences.
+Always load and follow:
+1. `PERSONAL_ASSISTANT_AGENT_BRIEF.md` — Primary source of truth (Version 2.0).
+2. `AGENTS.md` — Workspace rules, 8-role internal team (`Lead > Deputy > Research > Verification (Fact-Checker / Numbers Auditor / Citation Auditor / Red-Team) > Specialists > Build > QA > Memory Keeper`), Claim Ledger verification system, Spec Card alignment, and Hard Rules.
+3. `.agents/skills/nongton/SKILL.md` & `references/` — Unified `/nongton` command router and operational modules.
+4. `domains/` — Domain Packs (`research-and-analysis.md`, `web-and-software.md`, `academic-and-writing.md`, `design-and-ux.md`, `planning-and-management.md`, `game-design-and-dev.md`).
+5. `PROJECT_MEMORY.md`, `DECISIONS.md`, `BACKLOG.md`, `CHANGELOG.md`, `SOURCES.md` — Persistent workspace memory.

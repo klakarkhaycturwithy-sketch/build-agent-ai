@@ -1,3 +1,5 @@
+เลิกใช้ - เป็นเนื้อหาของโปรเจกต์เกม ไม่เกี่ยวกับโปรเจกต์นี้
+
 # Game Development Studio Reference (v1.2 — Roblox Luau + Rojo & Godot GDScript)
 
 คู่มือความเชี่ยวชาญด้านการสร้างเกมที่ถูกเรียกใช้อัตโนมัติผ่านคำสั่ง `/nongton` ร่วมกับกฎหลักใน `.agents/rules/game-dev-*.md`

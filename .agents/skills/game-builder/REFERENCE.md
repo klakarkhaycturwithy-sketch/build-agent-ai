@@ -1,8 +1,5 @@
-# Game Builder Folder (Linked to Unified `/nongton` Command)
+# Game Builder Folder (Linked to `/nongton` Multi-Domain Central Hub)
 
-โฟลเดอร์นี้ถูกคงไว้ตามโครงสร้างมาตรฐานของคุณ `nongton` โดยรวมทางเข้าคำสั่ง Slash Command ไว้ที่ `.agents/skills/nongton/SKILL.md` เพียงจุดเดียว เพื่อให้เวลาพิมพ์ `/` ในแชทแสดงเฉพาะคำสั่ง **`/nongton`** ไม่สับสน
-
-- คู่มือฉบับเต็มของสตูดิโอสร้างเกม (Roblox Studio Luau + Rojo และ Godot GDScript) อยู่ที่:
-  `../nongton/references/game-studio-v1.2.md`
-- วิธีเรียกใช้งาน: พิมพ์ `/nongton <คำสั่งสร้างหรือแก้เกม>` ได้ทันที
-
+โฟลเดอร์นี้เชื่อมต่อกับคำสั่งหลัก **`/nongton`** (Personal Assistant AI Agent) ในฐานะ **ศูนย์กลางรวมเครื่องมือช่วยออกแบบและพัฒนาเกม (Game Design & Development Tool Hub)**
+- รายละเอียดอยู่ใน `../nongton/references/game-dev-hub.md` และ `../../../domains/game-design-and-dev.md`
+- เรียกใช้งานร่วมกับความสามารถอื่นของผู้ช่วยส่วนตัวได้ทันทีผ่านคำสั่งเดียว: `/nongton <สิ่งที่ต้องการให้ช่วย>`
