@@ -1,7 +1,7 @@
 {
   "name": "nongton",
-  "version": "1.1.0",
-  "description": "nongton 6-Role Game & Web Development AI Agent Studio (v1.1 with Game Dev Master Prompt v1.1)",
+  "version": "1.2.0",
+  "description": "nongton All-in-One 6-Role Game & Web Development AI Agent Studio (Unified /nongton command, Roblox Luau+Rojo & Godot GDScript)",
   "bin": {
     "nongton": "./bin/cli.js",
     "nongton-agent": "./bin/cli.js"
@@ -25,6 +25,9 @@
     "antigravity",
     "claude",
     "gemini",
+    "roblox",
+    "rojo",
+    "godot",
     "game-dev",
     "web-dev"
   ],

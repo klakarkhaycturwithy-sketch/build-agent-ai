@@ -18,10 +18,13 @@ trigger: always_on
 │   │   ├── game-dev-workflow-decisions.md Game Dev Master Prompt v1.1 (ข้อ 6–10: Rules, Spec Card, Open Decisions)
 │   │   └── game-dev-qa-kickoff.md         Game Dev Master Prompt v1.1 (ข้อ 11–20: Design, MVP 7 วัน, QA, Kickoff)
 │   └── skills/
-│       ├── nongton/SKILL.md       ทักษะตัวแปรคำสั่งหลัก nongton (6-role workflow v1.1)
-│       ├── game-builder/SKILL.md  ทักษะสตูดิโอสร้างเกม (Roblox+Rojo / Godot / Web / Canvas)
-│       ├── deploy-helper/SKILL.md ทักษะตรวจความปลอดภัยและส่งขึ้น GitHub / Vercel
-│       └── code-coach/SKILL.md    ทักษะอธิบายโค้ดและสอนหลักคิดสำหรับมือใหม่ (Teaching & Unblock Mode)
+│       └── nongton/
+│           ├── SKILL.md                   คำสั่งเดียวรวมทุกความสามารถ (/nongton All-in-One Router v1.2)
+│           └── references/                คลังความเชี่ยวชาญย่อยที่ /nongton ดึงใช้อัตโนมัติ
+│               ├── game-studio-v1.2.md    สตูดิโอสร้างเกม (Roblox Luau + Rojo และ Godot GDScript)
+│               ├── web-studio.md          สตูดิโอสร้างเว็บ (Minimal Light 2 ภาษา TH/EN)
+│               ├── code-coach-unblock.md  โหมดสอนโค้ดมือใหม่และปลดล็อกเมื่อตัน (Teaching & Unblock)
+│               └── deploy-security.md     ตรวจความปลอดภัย ลิขสิทธิ์ กฎรายได้ และส่งขึ้น GitHub/Vercel
 ├── projects/
 │   └── <project-name>/       หนึ่งโฟลเดอร์ต่อหนึ่งโปรเจกต์ (ภาษาอังกฤษตัวเล็กคั่นด้วยขีด)
 │       ├── PROJECT_MEMORY.md memory เฉพาะโปรเจกต์: สถาปัตยกรรม, ข้อมูล, บัค
@@ -43,7 +46,8 @@ trigger: always_on
 | เว็บเล็ก (1–3 หน้า, landing, portfolio) | HTML + CSS + JavaScript ล้วน ไม่ต้อง build | งานส่วนใหญ่ เปิดไฟล์ในเบราว์เซอร์ได้ทันที |
 | เว็บที่มีหลายหน้า/ข้อมูลเยอะ | Vite + JavaScript (เพิ่ม React เฉพาะเมื่อจำเป็นจริง) | เมื่อ HTML ล้วนเริ่มจัดการยาก |
 | เกม 2D เล่นบนเบราว์เซอร์ | HTML5 Canvas หรือ Phaser + Vite | เกมที่อยากเปิดเล่นทันทีหรือแชร์ผ่าน Vercel/Netlify |
-| เกมที่อยากทำเป็นโปรแกรมติดตั้ง หรือ 3D | Godot | เมื่อผู้ใช้อยากได้เกมแบบ standalone |
+| เกมออนไลน์ 3D / สนามประลอง / ปล่อยสาธารณะง่าย | Roblox Studio (ภาษา Luau) + เชื่อมโค้ดผ่าน Rojo | เมื่ออยากได้เซิร์ฟเวอร์ออนไลน์ในตัว เล่นได้ทุกอุปกรณ์ และต่อยอดหารายได้บน Roblox |
+| เกมที่อยากทำเป็นโปรแกรมติดตั้ง (`.exe`) / RPG / 3D-2D อิสระ | Godot Engine (ภาษา GDScript ใกล้เคียง Python) | เมื่ออยากเป็นเจ้าของไฟล์เกม 100% ปล่อยบน Steam/itch.io หรือเล่นออฟไลน์สู้บอท |
 
 - ทุกเครื่องมือต้องรันบน Windows + AMD GPU ได้ ห้ามพึ่ง CUDA/NVIDIA
 - ก่อนติดตั้ง ให้ตรวจเวอร์ชันเสถียรล่าสุดจากเอกสารทางการ ห้ามเดาเวอร์ชัน

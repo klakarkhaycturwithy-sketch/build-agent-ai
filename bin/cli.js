@@ -5,6 +5,7 @@ const path = require("path");
 
 const PACKAGE_ROOT = path.resolve(__dirname, "..");
 const PACKAGE_META = JSON.parse(fs.readFileSync(path.join(PACKAGE_ROOT, "package.json"), "utf8"));
+const LEGACY_SKILL_NAMES = ["game-builder", "deploy-helper", "code-coach"];
 
 function formatTimestamp(nowDate) {
   const padTwo = (num) => String(num).padStart(2, "0");
@@ -17,20 +18,20 @@ function formatTimestamp(nowDate) {
 }
 
 function buildStarterMemory(isoDateStr) {
-  return `# PROJECT MEMORY (nongton Workspace)
+  return `# PROJECT MEMORY (nongton Workspace — Studio v1.2)
 
 Last Updated: ${isoDateStr}
 
 ## 1. Architecture & Key Decisions
+- Unified Command Trigger: Use \`/nongton <คำสั่ง>\` (or \`nongton <คำสั่ง>\`) for all tasks (Game Dev, Web Dev, Code Coach, Unblock Mode, Git/Vercel Deploy, and Prompt/Memory updates).
 - Team Workflow: 6 sequential roles with QA Gates: \`Lead > Deputy > Design UX/UI > Backend > Frontend > QA\`
-- Game Dev Studio Rules: Loaded from \`.agents/rules/game-dev-master.md\`, \`game-dev-workflow-decisions.md\`, and \`game-dev-qa-kickoff.md\` (Master Prompt v1.1).
-- Primary Trigger: Start prompts with \`nongton\` (or \`/nongton\` / \`เริ่มเซสชัน\`) to activate full 6-role development mode.
+- Dual Game Engines: Supports both **A. Roblox Studio (Luau + Rojo)** and **B. Godot Engine (GDScript)** alongside Web (\`HTML/CSS/JS\`, \`Vite\`).
 - Backup Policy: Back up any file to \`.backups/YYYYMMDD-HHMM/\` before editing. Never delete files; move obsolete files to \`_to_delete/\`.
 
 ## 2. User Profile & Preferences (nongton)
 - Hardware & OS: Windows, AMD Ryzen 5 5600, 32 GB RAM, AMD Radeon RX Vega GPU (Strictly NO CUDA/NVIDIA tools).
 - Default Web Style: Minimal Light (\`#FAF8F5\` background, \`#FFFFFF\` surface, \`#0F766E\` accent, Inter + Noto Sans Thai, bilingual TH/EN toggle).
-- Communication: Thai explanations without emojis, English code/identifiers, brief explanation of technical terms in parentheses.
+- Communication: Thai explanations without emojis, English code/identifiers, brief explanation of technical terms in parentheses with comparisons to JS/Python.
 
 ## Project Index
 - (none yet — create projects inside \`projects/<project-name>/\`)
@@ -39,12 +40,12 @@ Last Updated: ${isoDateStr}
 
 function buildGameDocTemplates(isoDateStr) {
   return {
-    "DECISIONS.md": `# DECISIONS LOG (บันทึกการตัดสินใจ)\n\n| วันที่ | เรื่อง | ตัวเลือก | ที่เลือก | เหตุผล |\n|---|---|---|---|---|\n| ${isoDateStr} | เริ่มโปรเจกต์เกม (Master Prompt v1.1) | A/B/C | รอตัดสินใจกลุ่มที่ 1 | รอผ่าน Technology Gate และ Concept Gate |\n`,
-    "GDD.md": `# GAME DESIGN DOCUMENT (GDD ฉบับสั้น)\n\nLast Updated: ${isoDateStr}\n\n## 1. Core Concept & Tagline\n- สถานะ: รอล็อกที่ CONCEPT GATE (ข้อ 10)\n\n## 2. Core Loop\n- เลือกอาวุธ -> สู้ (ยิงศัตรู) -> ได้เงิน -> ซื้ออาวุธ/อัปเกรด -> วนซ้ำ\n\n## 3. Weapon & Economy Balance Table\n- รอกำหนดหลังผ่านการตัดสินใจกลุ่มที่ 1 และ 2\n`,
-    "BACKLOG.md": `# BACKLOG (ไอเดียและงานค้าง)\n\n| รหัส | รายการ | สถานะ (เสนอ/อนุมัติ/ปฏิเสธ/เสร็จ) | หมายเหตุ |\n|---|---|---|---|\n| B-01 | ตัดสินใจกลุ่มที่ 1 (Engine + มุมกล้อง + คำโปรย + Concept Gate + เป้าหมาย) | เสนอ | บล็อกการเริ่มเขียนโค้ด |\n`,
-    "CHANGELOG.md": `# CHANGELOG (บันทึกการเปลี่ยนแปลงทุกเซสชัน)\n\n## [${isoDateStr}] เซสชันเริ่มต้น\n- ติดตั้งระบบ \`nongton v${PACKAGE_META.version}\` และโครงสร้างไฟล์เอกสารเกมตาม Master Prompt v1.1 (ข้อ 13)\n`,
-    "ASSETS.md": `# ASSETS REGISTRY (ทะเบียนแอสเซ็ตและไลเซนส์ - COPY GATE ข้อ 4)\n\n| ชื่อแอสเซ็ต | แหล่งที่มา | ผู้สร้าง | ไลเซนส์ | เงื่อนไขการใช้งาน |\n|---|---|---|---|---|\n| (ยังไม่มีแอสเซ็ตภายนอก) | - | - | - | ต้องผ่าน COPY GATE ก่อนนำมาใช้ |\n`,
-    "TESTLOG.md": `# TEST LOG (บันทึกผลการทดสอบ - QA Protocol ข้อ 14)\n\nป้ายยืนยันที่ใช้: \`[ทดสอบแล้ว]\` | \`[ตรวจโค้ดแล้ว]\` | \`[ยังไม่ได้ทดสอบ]\`\n\n| วันที่ | ฟีเจอร์/การทดสอบ | ป้ายยืนยัน | วิธีทดสอบและผลลัพธ์ |\n|---|---|---|---|\n| ${isoDateStr} | โครงสร้างโปรเจกต์และกฎ Master Prompt v1.1 | [ทดสอบแล้ว] | ตรวจสอบผ่าน \`npx nongton status\` |\n`
+    "DECISIONS.md": `# DECISIONS LOG (บันทึกการตัดสินใจ)\n\n| วันที่ | เรื่อง | ตัวเลือก | ที่เลือก | เหตุผล |\n|---|---|---|---|---|\n| ${isoDateStr} | เทคโนโลยีเอนจินเกมหลักของ nongton (ข้อ 5) | A/B/C/D | **A (Roblox Studio + Luau + Rojo) และ B (Godot + GDScript)** | รองรับทั้งเกมออนไลน์สนามประลองและเกมออฟไลน์/RPG อย่างเต็มประสิทธิภาพ |\n| ${isoDateStr} | มุมมองกล้องเริ่มต้นสำหรับเกมสไนเปอร์ | FPS / TPS | **FPS (มุมมองบุคคลที่หนึ่ง)** | เห็นมือและลำกล้องปืน ซูมสโคปได้เต็มอารมณ์ |\n| ${isoDateStr} | คำโปรยประจำเกมสไนเปอร์ (Tagline) | A / B | **B ("หลบให้พ้น เล็งให้แม่น และเป็นหนึ่งเดียวในสมรภูมิสไนเปอร์สุดเดือด!")** | กระชับ เร้าใจ ตรงฟีลสนามประลอง |\n| ${isoDateStr} | คอนเซ็ปต์เกม (CONCEPT GATE ข้อ 10.4) | 1 / 2 / 3 | **ตรวจสอบแนวเกมก่อนเสมอ (ถ้าทำเกมสไนเปอร์ ใช้แบบผสมผสานทั้ง 3 คอนเซ็ปต์)** | ยืดหยุ่นตามโปรเจกต์จริง และรวมจุดเด่นค่าหัว + บอท/บอส RPG + สนามเปลี่ยนสถานะ |\n| ${isoDateStr} | ปลายทางของโปรเจกต์ | A / B / C / D | **C (ปล่อยสาธารณะ) และ D (ต่อยอดหารายได้ในอนาคต)** | ต้องเน้น Server Authority กันโกง, COPY GATE ไม่ละเมิดลิขสิทธิ์, และถูกกฎแพลตฟอร์ม |\n`,
+    "GDD.md": `# GAME DESIGN DOCUMENT (GDD ฉบับสั้น)\n\nLast Updated: ${isoDateStr}\n\n## 1. Core Concept & Tagline\n- กฎหลัก: ตรวจสอบแนวเกมที่จะสร้างก่อนเสมอ หากเป็นโปรเจกต์สไนเปอร์ ใช้คอนเซ็ปต์ผสมผสาน (Hybrid Sniper Arena: Bounty Streak + RPG Bot/Boss + Shifting Arena)\n- คำโปรย (Tagline B): "หลบให้พ้น เล็งให้แม่น และเป็นหนึ่งเดียวในสมรภูมิสไนเปอร์สุดเดือด!"\n- มุมมองกล้อง: FPS (First-Person Shooter)\n- เอนจินที่รองรับ: Roblox Studio (Luau + Rojo) และ Godot Engine (GDScript)\n\n## 2. Core Loop\n- เลือกอาวุธ -> ลงสนามยิงศัตรู/สะสมค่าหัว/ล่าบอส -> ได้เงินและเลเวล -> ซื้ออาวุธ/อัปเกรดสกิล -> วนซ้ำ\n`,
+    "BACKLOG.md": `# BACKLOG (ไอเดียและงานค้าง)\n\n| รหัส | รายการ | สถานะ (เสนอ/อนุมัติ/ปฏิเสธ/เสร็จ) | หมายเหตุ |\n|---|---|---|---|\n| B-01 | ตัดสินใจกลุ่มที่ 1 (Engine A+B, กล้อง FPS, คำโปรย B, คอนเซ็ปต์ผสมผสาน, เป้าหมาย C+D) | เสร็จ | บันทึกใน DECISIONS.md แล้ว |\n| B-02 | เลือกโปรเจกต์แรกที่จะลงมือสร้างและตอบคำถามกลุ่มที่ 2 (Design ของ MVP) | เสนอ | สั่งผ่าน \`/nongton\` ได้ทันที |\n`,
+    "CHANGELOG.md": `# CHANGELOG (บันทึกการเปลี่ยนแปลงทุกเซสชัน)\n\n## [${isoDateStr}] อัปเกรดระบบ nongton v${PACKAGE_META.version}\n- รวมศูนย์ทุกคำสั่งไว้ใน \`/nongton\` คำสั่งเดียว (Unified All-in-One Router)\n- บันทึกผลการตัดสินใจกลุ่มที่ 1 (Roblox+Rojo & Godot, FPS, Tagline B, Hybrid Concept, เป้าหมาย C+D)\n`,
+    "ASSETS.md": `# ASSETS REGISTRY (ทะเบียนแอสเซ็ตและไลเซนส์ - COPY GATE ข้อ 4)\n\n| ชื่อแอสเซ็ต | แหล่งที่มา | ผู้สร้าง | ไลเซนส์ | เงื่อนไขการใช้งาน |\n|---|---|---|---|---|\n| (ยังไม่มีแอสเซ็ตภายนอก) | - | - | - | ต้องผ่าน COPY GATE ก่อนนำมาใช้เพื่อรองรับการปล่อยสาธารณะและหารายได้ |\n`,
+    "TESTLOG.md": `# TEST LOG (บันทึกผลการทดสอบ - QA Protocol ข้อ 14)\n\nป้ายยืนยันที่ใช้: \`[ทดสอบแล้ว]\` | \`[ตรวจโค้ดแล้ว]\` | \`[ยังไม่ได้ทดสอบ]\`\n\n| วันที่ | ฟีเจอร์/การทดสอบ | ป้ายยืนยัน | วิธีทดสอบและผลลัพธ์ |\n|---|---|---|---|\n| ${isoDateStr} | ระบบคำสั่งเดียว \`/nongton\` และ \`npx nongton\` v${PACKAGE_META.version} | [ทดสอบแล้ว] | ตรวจสอบผ่าน \`npx nongton\` ขึ้น READY ครบทุกรายการ |\n`
   };
 }
 
@@ -83,21 +84,41 @@ function copyDirectoryRecursive(sourceDir, targetDir, allowOverwrite) {
   }
 }
 
+function archiveLegacySkills(targetDir, stampStr) {
+  const skillsRoot = path.join(targetDir, ".agents", "skills");
+  if (!fs.existsSync(skillsRoot)) {
+    return;
+  }
+  for (const legacyName of LEGACY_SKILL_NAMES) {
+    const legacyPath = path.join(skillsRoot, legacyName);
+    if (fs.existsSync(legacyPath)) {
+      const archiveDest = path.join(targetDir, "_to_delete", `merged-skills-${stampStr}`, legacyName);
+      copyDirectoryRecursive(legacyPath, archiveDest, true);
+      fs.rmSync(legacyPath, { recursive: true, force: true });
+    }
+  }
+}
+
 function backupExistingRules(targetDir) {
   const stamp = formatTimestamp(new Date());
   const backupFolder = path.join(targetDir, ".backups", stamp);
   const rootRuleFiles = ["AGENTS.md", "CLAUDE.md"];
+  let hasBackedUpAny = false;
+
   for (const ruleFile of rootRuleFiles) {
     const fullRulePath = path.join(targetDir, ruleFile);
     if (fs.existsSync(fullRulePath)) {
       copyFileSafe(fullRulePath, path.join(backupFolder, ruleFile), true);
+      hasBackedUpAny = true;
     }
   }
   const agentsDir = path.join(targetDir, ".agents");
   if (fs.existsSync(agentsDir)) {
     copyDirectoryRecursive(agentsDir, path.join(backupFolder, ".agents"), true);
+    hasBackedUpAny = true;
   }
-  return backupFolder;
+  archiveLegacySkills(targetDir, stamp);
+  return hasBackedUpAny ? backupFolder : null;
 }
 
 function ensureGameDocuments(targetDir, isoDateStr) {
@@ -114,7 +135,7 @@ function ensureGameDocuments(targetDir, isoDateStr) {
 }
 
 function runInitCommand(targetDir, allowOverwrite, includeGameDocs) {
-  console.log(`\n[nongton v${PACKAGE_META.version}] Initializing 6-role Agent AI workspace in: ${targetDir}\n`);
+  console.log(`\n[nongton v${PACKAGE_META.version}] Setting up Unified /nongton Studio in: ${targetDir}\n`);
 
   const rootFiles = ["AGENTS.md", "CLAUDE.md", ".gitignore", ".vercelignore"];
   for (const fileName of rootFiles) {
@@ -125,7 +146,7 @@ function runInitCommand(targetDir, allowOverwrite, includeGameDocs) {
   }
 
   copyDirectoryRecursive(path.join(PACKAGE_ROOT, ".agents"), path.join(targetDir, ".agents"), allowOverwrite);
-  console.log(`  - .agents/           : installed (4 rules + 4 skills)`);
+  console.log(`  - .agents/           : installed (4 rules + unified /nongton skill & 4 references)`);
 
   ensureDirectory(path.join(targetDir, "projects"));
   ensureDirectory(path.join(targetDir, "_to_delete"));
@@ -144,17 +165,10 @@ function runInitCommand(targetDir, allowOverwrite, includeGameDocs) {
   if (includeGameDocs) {
     ensureGameDocuments(targetDir, todayStr);
   }
-
-  console.log(`\nDone! Start any chat prompt with "nongton <คำสั่ง>", "/nongton <คำสั่ง>", or "เริ่มเซสชัน".\n`);
-}
-
-function runUpdateCommand(targetDir, includeGameDocs) {
-  const backupLocation = backupExistingRules(targetDir);
-  console.log(`\n[nongton v${PACKAGE_META.version}] Backed up existing files to: ${backupLocation}`);
-  runInitCommand(targetDir, true, includeGameDocs);
 }
 
 function buildStatusChecks(targetDir) {
+  const refDir = path.join(targetDir, ".agents", "skills", "nongton", "references");
   return [
     ["AGENTS.md", path.join(targetDir, "AGENTS.md")],
     ["CLAUDE.md", path.join(targetDir, "CLAUDE.md")],
@@ -163,10 +177,11 @@ function buildStatusChecks(targetDir) {
     ["Rule: game-dev-master (1-5)", path.join(targetDir, ".agents", "rules", "game-dev-master.md")],
     ["Rule: game-dev-workflow (6-10)", path.join(targetDir, ".agents", "rules", "game-dev-workflow-decisions.md")],
     ["Rule: game-dev-qa-kickoff (11-20)", path.join(targetDir, ".agents", "rules", "game-dev-qa-kickoff.md")],
-    ["Skill: nongton", path.join(targetDir, ".agents", "skills", "nongton", "SKILL.md")],
-    ["Skill: game-builder", path.join(targetDir, ".agents", "skills", "game-builder", "SKILL.md")],
-    ["Skill: deploy-helper", path.join(targetDir, ".agents", "skills", "deploy-helper", "SKILL.md")],
-    ["Skill: code-coach", path.join(targetDir, ".agents", "skills", "code-coach", "SKILL.md")],
+    ["Unified Skill: /nongton", path.join(targetDir, ".agents", "skills", "nongton", "SKILL.md")],
+    ["Module: game-studio-v1.2 (Roblox+Godot)", path.join(refDir, "game-studio-v1.2.md")],
+    ["Module: web-studio (Minimal Light)", path.join(refDir, "web-studio.md")],
+    ["Module: code-coach-unblock", path.join(refDir, "code-coach-unblock.md")],
+    ["Module: deploy-security", path.join(refDir, "deploy-security.md")],
     ["Game Doc: DECISIONS.md", path.join(targetDir, "DECISIONS.md")],
     ["Game Doc: GDD.md", path.join(targetDir, "GDD.md")],
     ["Game Doc: BACKLOG.md", path.join(targetDir, "BACKLOG.md")],
@@ -185,32 +200,50 @@ function runStatusCommand(targetDir) {
     const existsFlag = fs.existsSync(checkPath) ? "READY" : "MISSING";
     console.log(`  [${existsFlag.padEnd(7)}] ${labelName}`);
   }
-  console.log("");
+  console.log(`\nReady! Use a single command in chat: "/nongton <สั่งงานอะไรก็ได้>"\n`);
+}
+
+function runSmartSingleCommand(targetDir) {
+  const backupLocation = backupExistingRules(targetDir);
+  if (backupLocation) {
+    console.log(`\n[nongton v${PACKAGE_META.version}] Backed up existing files to: ${backupLocation}`);
+  }
+  runInitCommand(targetDir, true, true);
+  runStatusCommand(targetDir);
 }
 
 function printHelpBanner() {
   console.log(`
-nongton v${PACKAGE_META.version} — 6-Role Game & Web Development AI Agent Studio CLI
+nongton v${PACKAGE_META.version} — All-in-One 6-Role Game & Web Development AI Agent Studio
 
-Usage:
-  npx nongton init          Install AGENTS.md, CLAUDE.md, .agents/ (4 rules + 4 skills), and folders
-  npx nongton init --game   Also scaffold Game Dev v1.1 docs (DECISIONS, GDD, BACKLOG, CHANGELOG, ASSETS, TESTLOG)
-  npx nongton status        Check installed nongton rules, skills, game docs, and folders
-  npx nongton update        Back up existing rules to .backups/ and update to latest nongton v1.1 templates
-  npx nongton update --game Update rules and ensure all 6 Game Dev v1.1 docs exist
+Single-Command Usage (Recommended):
+  npx nongton               Auto-backup, install/update all rules + Unified /nongton skill + game docs, and verify status
+
+Optional Subcommands:
+  npx nongton init          Install without overwriting existing files
+  npx nongton update        Back up existing rules to .backups/ and update to latest templates
+  npx nongton status        Check installed nongton rules, unified skill modules, and game docs
   npx nongton --version     Print version
 `);
 }
 
 function main() {
   const cliArgs = process.argv.slice(2);
-  const commandName = cliArgs[0] || "help";
+  const commandName = cliArgs[0] || "auto";
   const hasForceFlag = cliArgs.includes("--force");
-  const hasGameFlag = cliArgs.includes("--game");
+  const hasGameFlag = cliArgs.includes("--game") || commandName === "auto";
   const targetDir = process.cwd();
 
   if (commandName === "--version" || commandName === "-v" || commandName === "version") {
     console.log(PACKAGE_META.version);
+    return;
+  }
+  if (commandName === "--help" || commandName === "-h" || commandName === "help") {
+    printHelpBanner();
+    return;
+  }
+  if (commandName === "auto") {
+    runSmartSingleCommand(targetDir);
     return;
   }
   if (commandName === "init") {
@@ -218,14 +251,14 @@ function main() {
     return;
   }
   if (commandName === "update") {
-    runUpdateCommand(targetDir, hasGameFlag);
+    runSmartSingleCommand(targetDir);
     return;
   }
   if (commandName === "status") {
     runStatusCommand(targetDir);
     return;
   }
-  printHelpBanner();
+  runSmartSingleCommand(targetDir);
 }
 
 main();

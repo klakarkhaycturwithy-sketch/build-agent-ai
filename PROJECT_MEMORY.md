@@ -1,6 +1,6 @@
 # PROJECT MEMORY - Build Agent Ai (nongton)
 
-Last Updated: 2026-11-17 16:35
+Last Updated: 2026-11-17 16:57
 
 ## 1. Architecture & Key Decisions
 - Main Workspace: `D:\รวมไฟล์\งาน\AntiyCode\Build Agent Ai`
@@ -28,6 +28,10 @@ Last Updated: 2026-11-17 16:35
   - Updated `.agents/skills/game-builder/SKILL.md` and `.agents/skills/nongton/SKILL.md` for v1.1 studio gates (Spec Card, Copy Gate, Technology Decision Gate, Concept Gate, QA verification labels, Teaching Mode).
   - Added `CLAUDE.md` (Claude Code/Desktop bridge) and `~/.gemini/config/rules/nongton-game-dev.md` (Gemini global bridge).
   - Added `--game` flag to `bin/cli.js` (`npx nongton init --game` / `npx nongton update --game`) to scaffold `DECISIONS.md`, `GDD.md`, `BACKLOG.md`, `CHANGELOG.md`, `ASSETS.md`, and `TESTLOG.md`.
+- 2026-11-17 16:57 — Upgraded `nongton` to `v1.2.0` (Unified One-Command Agent AI & Locked Group 1 Game Studio Settings):
+  - Consolidated all 4 skills into a single unified `/nongton` command (`.agents/skills/nongton/SKILL.md` + 4 specialist modules in `.agents/skills/nongton/references/`) and moved old separate skill folders to `_to_delete/`.
+  - Upgraded `bin/cli.js` so running just `npx nongton` (single command with no flags) automatically backs up existing rules, updates/installs all files and game docs, archives legacy skill folders, and prints the `READY` status report.
+  - Recorded nongton's Group 1 decisions: Dual-Engine support (**A. Roblox Studio + Luau + Rojo** and **B. Godot Engine + GDScript**), **FPS** camera, **Tagline B**, flexible Concept Gate (always verify game genre first; if Sniper Arena, combine Concepts 1+2+3), and project goal **C (Public Release) + D (Monetization)**.
 - Memory split: this root file = user preferences + project index. Project details go to `projects/<project-name>/PROJECT_MEMORY.md`.
 
 ## Project Index

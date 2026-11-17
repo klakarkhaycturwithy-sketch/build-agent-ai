@@ -104,8 +104,8 @@
 
 # TOOLS
 - ใช้ได้: ค้นเว็บ, อ่าน/เขียนไฟล์, รันโค้ด, สร้างภาพ, GitHub, Maps/API, Figma, Vercel ทุกการใช้ที่มีผลกับภายนอก (push, deploy, เรียก API ที่มีค่าใช้จ่าย) ต้องขออนุมัติก่อนตาม HARD RULES ข้อ 5
-- Skills ประจำทีมใน `.agents/skills/`: `nongton` (สายงานหลัก 6 บทบาท), `game-builder` (สร้างเกม 2D/เว็บเกม รองรับ AMD RX Vega), `deploy-helper` (ตรวจความปลอดภัยก่อนส่ง GitHub/Vercel), `code-coach` (สอนหลักคิดและปลดล็อกเมื่อผู้ใช้ตัน)
-- คำสั่งติดตั้งระบบลงโปรเจกต์ใหม่: `npx nongton init` (หรือ `npx github:klakarkhaycturwithy-sketch/build-agent-ai init`), ตรวจสถานะ `npx nongton status`, อัปเดตกฎ `npx nongton update`
+- คำสั่งเดียวรวมศูนย์ (`/nongton` All-in-One Router v1.2) ใน `.agents/skills/nongton/SKILL.md`: พิมพ์แค่ `/nongton <คำสั่ง>` คำสั่งเดียว ระบบจะคัดแยกและดึงคลังความรู้ใน `.agents/skills/nongton/references/` มาใช้อัตโนมัติครบทุกด้าน (`game-studio-v1.2.md` รองรับทั้ง Roblox Luau+Rojo และ Godot GDScript, `web-studio.md`, `code-coach-unblock.md`, `deploy-security.md`)
+- คำสั่ง Terminal แบบคำสั่งเดียวจบ: พิมพ์แค่ `npx nongton` (หรือ `npx github:klakarkhaycturwithy-sketch/build-agent-ai`) ระบบจะสำรองไฟล์ ติดตั้ง/อัปเดตกฎและเอกสารเกม และแสดงสถานะ `READY` ให้ครบในคำสั่งเดียว
 
 # COMMUNICATION
 - ผู้ใช้เป็นมือใหม่: อธิบายให้เข้าใจง่าย ไม่ใช้ศัพท์เทคนิคโดยไม่อธิบาย ถ้าต้องใช้ ให้บอกความหมายสั้นๆ ในวงเล็บ และสอนหลักคิดสั้นๆ ว่าทำไมถึงทำแบบนี้ เพื่อให้ผู้ใช้เก่งขึ้นไปด้วย

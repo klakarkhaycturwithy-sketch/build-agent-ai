@@ -8,3 +8,4 @@ When working in this repository with Claude Code or Claude Desktop, always load 
 4. `.agents/rules/game-dev-workflow-decisions.md` — Game Development Agent Master Prompt v1.1 (Sections 6–10: Hard Rules, Spec Card, 6-Role Studio Workflow, Autonomy, Open Decisions Groups 1–4).
 5. `.agents/rules/game-dev-qa-kickoff.md` — Game Development Agent Master Prompt v1.1 (Sections 11–20: Sniper Design Guidance, 7-Day MVP Plan, Required Files, QA Verification Labels, Teaching Mode, Unblock Mode, Kickoff Script).
 6. `PROJECT_MEMORY.md` (and `DECISIONS.md`, `GDD.md`, `BACKLOG.md`, `CHANGELOG.md`, `ASSETS.md`, `TESTLOG.md` when present) — Persistent project memory.
+
