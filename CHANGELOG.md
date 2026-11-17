@@ -1,8 +1,8 @@
 # CHANGELOG (บันทึกการเปลี่ยนแปลงทุกเซสชัน)
 
-## [2026-11-17] ปรับสถาปัตยกรรมสู่รูปแบบวิธีที่ 2 (Method 2: Unlimited Knowledge Vault) และล็อก Tech Decision Gate
-- ย่อ `AGENTS.md` เหลือ `9,593 bytes` เพื่อทำหน้าที่เป็นสารบัญหลัก (`Compact Master Index & Auto-Router`) ที่ไม่ติดเพดาน 24,000 bytes
-- ย้ายเนื้อหาเชิงลึกและคัมภีร์แม่บททั้งหมดไปเก็บใน `.agents/skills/nongton/references/*.md` (7 โมดูลไร้เพดาน รวม `master-brief-v2.0.md` ขนาด `32,003 bytes`) และ `domains/*.md` (6 โดเมนความเชี่ยวชาญ)
+## [2026-11-17] ขยายพื้นที่เก็บข้อมูลแบบไม่จำกัดโดยไม่ลดขนาดไฟล์เดิม (Expanded Unlimited Storage Vault)
+- คืนค่าเนื้อหาฉบับเต็ม 100% ของ `AGENTS.md` และเพิ่มกฎเหล็กข้อ 10: **ห้ามย่อหรือลดขนาดไฟล์งานของผู้ใช้เด็ดขาด** (เปลี่ยนจากการลดขนาดไฟล์ เป็นการขยายพื้นที่เก็บข้อมูลเพิ่ม)
+- ขยายพื้นที่เก็บข้อมูลเพิ่มเติมแบบไร้เพดานใน `.agents/skills/nongton/references/*.md` (7 โมดูลเต็มความจุ รวม `master-brief-v2.0.md` ขนาด `32,003 bytes`) และ `domains/*.md` (6 โดเมนความเชี่ยวชาญ)
 - บันทึกผลการตัดสินใจ `TECH DECISION GATE` ทั้ง 5 ข้อลงใน `DECISIONS.md` และ `BACKLOG.md`
 
 ## [2026-11-17] อัปเกรดสู่ Personal Assistant AI Agent v2.0
