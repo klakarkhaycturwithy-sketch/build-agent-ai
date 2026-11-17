@@ -90,11 +90,11 @@ function archiveLegacySkills(targetDir, stampStr) {
     return;
   }
   for (const legacyName of LEGACY_SKILL_NAMES) {
-    const legacyPath = path.join(skillsRoot, legacyName);
-    if (fs.existsSync(legacyPath)) {
-      const archiveDest = path.join(targetDir, "_to_delete", `merged-skills-${stampStr}`, legacyName);
-      copyDirectoryRecursive(legacyPath, archiveDest, true);
-      fs.rmSync(legacyPath, { recursive: true, force: true });
+    const legacySkillFile = path.join(skillsRoot, legacyName, "SKILL.md");
+    if (fs.existsSync(legacySkillFile)) {
+      const archiveDest = path.join(targetDir, "_to_delete", `merged-skills-${stampStr}`, legacyName, "SKILL.md");
+      copyFileSafe(legacySkillFile, archiveDest, true);
+      fs.rmSync(legacySkillFile, { force: true });
     }
   }
 }
@@ -182,6 +182,10 @@ function buildStatusChecks(targetDir) {
     ["Module: web-studio (Minimal Light)", path.join(refDir, "web-studio.md")],
     ["Module: code-coach-unblock", path.join(refDir, "code-coach-unblock.md")],
     ["Module: deploy-security", path.join(refDir, "deploy-security.md")],
+    ["Module: session-manager", path.join(refDir, "session-manager.md")],
+    ["Folder: skills/game-builder", path.join(targetDir, ".agents", "skills", "game-builder", "REFERENCE.md")],
+    ["Folder: skills/deploy-helper", path.join(targetDir, ".agents", "skills", "deploy-helper", "REFERENCE.md")],
+    ["Folder: skills/code-coach", path.join(targetDir, ".agents", "skills", "code-coach", "REFERENCE.md")],
     ["Game Doc: DECISIONS.md", path.join(targetDir, "DECISIONS.md")],
     ["Game Doc: GDD.md", path.join(targetDir, "GDD.md")],
     ["Game Doc: BACKLOG.md", path.join(targetDir, "BACKLOG.md")],

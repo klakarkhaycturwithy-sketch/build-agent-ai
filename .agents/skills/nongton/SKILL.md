@@ -16,7 +16,7 @@ description: >-
   ├─ [โหมด 2: สร้างเว็บ / แก้หน้าเว็บ / UI]       --> โหลด references/web-studio.md (Minimal Light TH/EN)
   ├─ [โหมด 3: สอนโค้ด / อธิบายศัพท์ / ตันคิดไม่ออก] --> โหลด references/code-coach-unblock.md (Teaching & Unblock)
   ├─ [โหมด 4: เซฟงาน / GitHub / Vercel / ตรวจกฎ] --> โหลด references/deploy-security.md (Safety & Copy Gate)
-  └─ [โหมด 5: เริ่มเซสชัน / แก้ Prompt / อัปเดตระบบ] --> อ่าน/อัปเดต Memory + สำรองไฟล์ลง .backups/
+  └─ [โหมด 5: เริ่มเซสชัน / แก้ Prompt / อัปเดตระบบ] --> โหลด references/session-manager.md (Memory & Backup)
 ```
 
 ---
