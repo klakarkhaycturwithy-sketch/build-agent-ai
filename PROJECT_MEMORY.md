@@ -1,6 +1,6 @@
-# PROJECT MEMORY - nongton (Personal Assistant AI Agent & Multi-Domain Hub v2.0)
+# PROJECT MEMORY - nongton (Personal Assistant AI Agent & Multi-Domain Hub v2.1.0)
 
-Last Updated: 2026-11-17 21:58
+Last Updated: 2026-11-17 23:05
 
 ## 1. Architecture & Key Decisions
 - **Source of Truth:** `PERSONAL_ASSISTANT_AGENT_BRIEF.md` (Version 2.0).
@@ -11,9 +11,9 @@ Last Updated: 2026-11-17 21:58
 - **Research & Verification System:**
   - Mandatory **Claim Ledger** table with 4 confidence labels: `[ยืนยันแล้ว]`, `[น่าจะถูก]`, `[ไม่แน่ใจ]`, `[ยังตรวจไม่ได้]`.
   - 4-tier source reliability hierarchy and 3 verification depth levels (`เบา / ปกติ / เข้ม`).
-- **One-Command Trigger (`/nongton` & `npx nongton` v2.0.0):**
+- **One-Command Trigger (`/nongton` & `npx nongton` v2.1.0):**
   - Single chat command `/nongton <คำสั่ง>` routes automatically across all 7 operational reference modules and 6 `domains/*.md` Domain Packs.
-  - Installed Project Skills in `.agents/skills/` (tracked in `skills-lock.json`): `nongton` (central hub), `using-agent-skills` (`addyosmani/agent-skills`), `vercel-react-best-practices` (`vercel-labs/agent-skills`), `agent-browser`, `executing-plans`, `grill-me`, `web-search`.
+  - Installed Project Skills in `.agents/skills/` (tracked in `skills-lock.json`): `nongton` (central hub), `using-agent-skills` (`addyosmani/agent-skills`), `vercel-react-best-practices` (`vercel-labs/agent-skills`), `web-design-engineer` (`ConardLi/garden-skills`), `supabase` (`supabase/agent-skills`), `agent-browser`, `executing-plans`, `grill-me`, `web-search`.
   - Single terminal command `npx nongton` backs up existing files, installs/updates rules, Domain Packs, and root memory files (`PROJECT_MEMORY.md`, `DECISIONS.md`, `BACKLOG.md`, `CHANGELOG.md`, `SOURCES.md`), and verifies all 26 workspace status items.
 - **Archive & Backup Policy:**
   - Back up any file to `.backups/YYYYMMDD-HHMM/` before editing.

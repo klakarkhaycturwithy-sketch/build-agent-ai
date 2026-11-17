@@ -22,6 +22,13 @@
       "skillPath": "skills/productivity/grill-me/SKILL.md",
       "computedHash": "ab1acb9fbd9eaee03da254abb8a8de228d1e7a07475fe959da4a5eefa34ea4b9"
     },
+    "supabase": {
+      "source": "supabase/agent-skills",
+      "commit": "c9be0e931b7930f7d02126d04774d904c381e7d7",
+      "sourceType": "github",
+      "skillPath": "skills/supabase/SKILL.md",
+      "computedHash": "2fbff32fd63b7d31585cacf0ed43e5bf8d05dd20d6c0c751d256cb967a00eec1"
+    },
     "using-agent-skills": {
       "source": "addyosmani/agent-skills",
       "commit": "39b723ceebf81474d0557c1fecd01eddab585563",
@@ -35,6 +42,13 @@
       "sourceType": "github",
       "skillPath": "skills/react-best-practices/SKILL.md",
       "computedHash": "7991ed4fbecdac23f47c1a40c243e00a212a9e7f3604db93959b3ae11dffe299"
+    },
+    "web-design-engineer": {
+      "source": "ConardLi/garden-skills",
+      "commit": "9578a34edf3c359da23d8a632b72790834961d11",
+      "sourceType": "github",
+      "skillPath": "skills/web-design-engineer/SKILL.md",
+      "computedHash": "c8fcbb8fa6b93cb47a1dec38c300489a2eb10b2874dc1a03e0e69163cf8b40d2"
     },
     "web-search": {
       "source": "skills-shell/superpowers",

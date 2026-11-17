@@ -1,6 +1,6 @@
 {
   "name": "nongton",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "nongton Personal Assistant AI Agent & Multi-Domain Expert Central Hub (8-Role Research, Verification & Execution Team + Game Design/Dev Tool Hub)",
   "bin": {
     "nongton": "./bin/cli.js",
@@ -10,6 +10,7 @@
     "bin/",
     ".agents/",
     "domains/",
+    "skills-lock.json",
     "PERSONAL_ASSISTANT_AGENT_BRIEF.md",
     "AGENTS.md",
     "CLAUDE.md",

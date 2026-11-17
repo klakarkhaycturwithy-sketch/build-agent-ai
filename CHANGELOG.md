@@ -1,5 +1,10 @@
 # CHANGELOG (บันทึกการเปลี่ยนแปลงทุกเซสชัน)
 
+## [2026-11-17] v2.1.0 — อัปเดตเวอร์ชันโปรเจกต์เป็น v2.1.0 และซิงก์ชุดสกิลเสริมครบ 8 สกิลขึ้น GitHub
+- อัปเดตหมายเลขเวอร์ชันโปรเจกต์จาก `2.0.0` เป็น `2.1.0` (`v2.1.0`) ใน `package.json`, `README.md`, และ `PROJECT_MEMORY.md`
+- ซิงก์ชุดสกิลเสริมทั้งหมดใน `.agents/skills/` และ `skills-lock.json` (`using-agent-skills`, `vercel-react-best-practices`, `web-design-engineer`, `supabase`, `agent-browser`, `executing-plans`, `grill-me`, `web-search`)
+- สร้าง Git Tag `v2.1.0` และเผยแพร่ GitHub Release `v2.1.0` บน `https://github.com/klakarkhaycturwithy-sketch/nongton`
+
 ## [2026-11-17] ติดตั้งสกิลเสริม using-agent-skills และ vercel-react-best-practices ลงในโปรเจกต์
 - สำรองไฟล์ `skills-lock.json`, `PROJECT_MEMORY.md`, และ `CHANGELOG.md` ไว้ที่ `.backups/20261117-2228/`
 - ติดตั้งสกิล `using-agent-skills` จาก `https://github.com/addyosmani/agent-skills` ลงใน `.agents/skills/using-agent-skills/`
