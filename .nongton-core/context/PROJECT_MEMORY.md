@@ -1,9 +1,13 @@
 # PROJECT MEMORY - nongton (Personal Assistant AI Agent & Multi-Domain Hub v2.1.0)
 
-Last Updated: 2026-11-17 23:05
+Last Updated: 2026-11-18 22:24
 
 ## 1. Architecture & Key Decisions
-- **Source of Truth:** `PERSONAL_ASSISTANT_AGENT_BRIEF.md` (Version 2.0).
+- **Source of Truth:** `.nongton-core/context/PERSONAL_ASSISTANT_AGENT_BRIEF.md` (Version 2.0).
+- **Consolidated Workspace Layout (`.nongton-core/` & `.storage/` + `.vscode/settings.json`):**
+  - `.nongton-core/bin/cli.js`, `.nongton-core/domains/*.md`, `.nongton-core/context/*.md` (`PERSONAL_ASSISTANT_AGENT_BRIEF.md`, `PROJECT_MEMORY.md`, `DECISIONS.md`, `BACKLOG.md`, `CHANGELOG.md`, `SOURCES.md`), and `.nongton-core/skills-lock.json`.
+  - `.storage/_archive/`, `.storage/_to_delete/`, and `.storage/.backups/`.
+  - `.vscode/settings.json` configured with Visual File Nesting & Hiding for a clean Antigravity IDE sidebar.
 - **Main Workspace:** `D:\รวมไฟล์\งาน\AntiyCode\nongton` (GitHub Repository: `https://github.com/klakarkhaycturwithy-sketch/nongton`)
 - **Core Identity:** **`nongton`** is a **Personal Assistant AI Agent** that acts as a team of experienced experts across a wide range of fields (`ค้นคว้าและวิเคราะห์`, `พัฒนาเว็บและซอฟต์แวร์`, `งานเรียนและการเขียน`, `ดีไซน์และ UX/UI`, `จัดการงานและวางแผน`). While it is **not** a dedicated game-creation engine, it serves as a **central hub for various tools that assist in the design and development of games** alongside all other domains.
 - **Internal Team (8 Roles, 9-Step Workflow):**
@@ -14,7 +18,7 @@ Last Updated: 2026-11-17 23:05
 - **One-Command Trigger (`/nongton` & `npx nongton` v2.1.0):**
   - Single chat command `/nongton <คำสั่ง>` routes automatically across all 7 operational reference modules and 6 `domains/*.md` Domain Packs.
   - Installed Project Skills in `.agents/skills/` (tracked in `skills-lock.json`): `nongton` (central hub), `using-agent-skills` (`addyosmani/agent-skills`), `vercel-react-best-practices` (`vercel-labs/agent-skills`), `web-design-engineer` (`ConardLi/garden-skills`), `supabase` (`supabase/agent-skills`), `agent-browser`, `executing-plans`, `grill-me`, `web-search`.
-  - Single terminal command `npx nongton` backs up existing files, installs/updates rules, Domain Packs, and root memory files (`PROJECT_MEMORY.md`, `DECISIONS.md`, `BACKLOG.md`, `CHANGELOG.md`, `SOURCES.md`), and verifies all 26 workspace status items.
+  - Single terminal command `npx nongton` backs up existing files, installs/updates rules, Domain Packs, and root memory files (`PROJECT_MEMORY.md`, `DECISIONS.md`, `BACKLOG.md`, `CHANGELOG.md`, `SOURCES.md`), and verifies all 25 workspace status items (cleaned of legacy Gemini/Claude/Vercel root files on 2026-11-18 while preserving the React skill in `.agents/skills/`).
 - **Archive & Backup Policy:**
   - Back up any file to `.backups/YYYYMMDD-HHMM/` before editing.
   - Never delete files; move obsolete files to `_to_delete/` and deprecated standalone game-prompt files to `_archive/` with the deprecation header `"เลิกใช้ - เป็นเนื้อหาของโปรเจกต์เกม ไม่เกี่ยวกับโปรเจกต์นี้"`.

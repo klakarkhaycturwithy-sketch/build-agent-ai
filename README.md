@@ -28,11 +28,12 @@ npx github:klakarkhaycturwithy-sketch/nongton
 
 ---
 
-## 3. โครงสร้างระบบตาม `PERSONAL_ASSISTANT_AGENT_BRIEF.md` (v2.0)
+## 3. โครงสร้างระบบตาม `.nongton-core/context/PERSONAL_ASSISTANT_AGENT_BRIEF.md` (v2.0)
 
-- **`PERSONAL_ASSISTANT_AGENT_BRIEF.md`** — เอกสารความจริงหลักของโปรเจกต์ (เวอร์ชัน 2.0)
-- **`AGENTS.md` & `CLAUDE.md`** — กฎหลักของทีมภายใน 8 บทบาท และระบบตรวจสอบ `Claim Ledger`
-- **`domains/`** — คลังความเชี่ยวชาญเชิงลึกรายโดเมน (Domain Packs 6 สาขาเริ่มต้น + เพิ่มได้ตลอด)
+- **`AGENTS.md`** — ทางเข้ากฎหลักของทีมภายใน 8 บทบาทที่หน้า Root (ชี้ไปยัง `.nongton-core/context/` และ `.nongton-core/domains/`)
+- **`.nongton-core/context/`** — ศูนย์รวมไฟล์ความจำและสถานะของโปรเจกต์ (`PERSONAL_ASSISTANT_AGENT_BRIEF.md`, `PROJECT_MEMORY.md`, `DECISIONS.md`, `BACKLOG.md`, `CHANGELOG.md`, `SOURCES.md`)
+- **`.nongton-core/domains/`** — คลังความเชี่ยวชาญเชิงลึกรายโดเมน (Domain Packs 6 สาขาเริ่มต้น + เพิ่มได้ตลอด)
+- **`.nongton-core/bin/cli.js` & `.nongton-core/skills-lock.json`** — เอนจิน CLI ของ `npx nongton` และรายการล็อกเวอร์ชันสกิลเสริม
+- **`.storage/`** — ศูนย์รวมโฟลเดอร์สำรองและเก็บถาวร (`.storage/_archive/`, `.storage/_to_delete/`, `.storage/.backups/`) ซ่อนจากแถบด้านซ้ายของ IDE ด้วย `.vscode/settings.json`
 - **`.agents/skills/nongton/`** — ทางเข้าคำสั่งเดียว (`/nongton`) และคู่มือปฏิบัติการย่อยใน `references/`
-- **`.agents/skills/` & `skills-lock.json`** — คลังสกิลเสริมระดับโปรเจกต์ที่ติดตั้งพร้อมใช้งาน (`using-agent-skills`, `vercel-react-best-practices`, `web-design-engineer`, `supabase`, `agent-browser`, `executing-plans`, `grill-me`, `web-search`)
-- **`PROJECT_MEMORY.md`, `DECISIONS.md`, `BACKLOG.md`, `CHANGELOG.md`, `SOURCES.md`** — ระบบความจำข้ามเซสชัน
+- **`.agents/skills/`** — คลังสกิลเสริมระดับโปรเจกต์ที่ติดตั้งพร้อมใช้งาน (`using-agent-skills`, `vercel-react-best-practices`, `web-design-engineer`, `supabase`, `agent-browser`, `executing-plans`, `grill-me`, `web-search`)

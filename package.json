@@ -3,24 +3,20 @@
   "version": "2.1.0",
   "description": "nongton Personal Assistant AI Agent & Multi-Domain Expert Central Hub (8-Role Research, Verification & Execution Team + Game Design/Dev Tool Hub)",
   "bin": {
-    "nongton": "./bin/cli.js",
-    "nongton-agent": "./bin/cli.js"
+    "nongton": "./.nongton-core/bin/cli.js",
+    "nongton-agent": "./.nongton-core/bin/cli.js"
   },
   "files": [
-    "bin/",
+    ".nongton-core/",
     ".agents/",
-    "domains/",
-    "skills-lock.json",
-    "PERSONAL_ASSISTANT_AGENT_BRIEF.md",
+    ".vscode/",
     "AGENTS.md",
-    "CLAUDE.md",
     ".gitignore",
-    ".vercelignore",
     "README.md"
   ],
   "scripts": {
-    "status": "node ./bin/cli.js status",
-    "test": "node ./bin/cli.js --version && node ./bin/cli.js status"
+    "status": "node ./.nongton-core/bin/cli.js status",
+    "test": "node ./.nongton-core/bin/cli.js --version && node ./.nongton-core/bin/cli.js status"
   },
   "keywords": [
     "nongton",
@@ -30,9 +26,7 @@
     "verification",
     "multi-domain",
     "game-dev-hub",
-    "antigravity",
-    "claude",
-    "gemini"
+    "antigravity"
   ],
   "author": "nongton <https://github.com/klakarkhaycturwithy-sketch>",
   "license": "MIT",

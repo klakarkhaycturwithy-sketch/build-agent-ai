@@ -3,7 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const PACKAGE_ROOT = path.resolve(__dirname, "..");
+const PACKAGE_ROOT = path.resolve(__dirname, "..", "..");
 const PACKAGE_META = JSON.parse(fs.readFileSync(path.join(PACKAGE_ROOT, "package.json"), "utf8"));
 const LEGACY_SKILL_NAMES = ["game-builder", "deploy-helper", "code-coach"];
 
@@ -91,7 +91,7 @@ function archiveLegacySkills(targetDir, stampStr) {
   for (const legacyName of LEGACY_SKILL_NAMES) {
     const legacySkillFile = path.join(skillsRoot, legacyName, "SKILL.md");
     if (fs.existsSync(legacySkillFile)) {
-      const archiveDest = path.join(targetDir, "_to_delete", `merged-skills-${stampStr}`, legacyName, "SKILL.md");
+      const archiveDest = path.join(targetDir, ".storage", "_to_delete", `merged-skills-${stampStr}`, legacyName, "SKILL.md");
       copyFileSafe(legacySkillFile, archiveDest, true);
       fs.rmSync(legacySkillFile, { force: true });
     }
@@ -100,8 +100,11 @@ function archiveLegacySkills(targetDir, stampStr) {
 
 function backupExistingRules(targetDir) {
   const stamp = formatTimestamp(new Date());
-  const backupFolder = path.join(targetDir, ".backups", stamp);
-  const rootRuleFiles = ["PERSONAL_ASSISTANT_AGENT_BRIEF.md", "AGENTS.md", "CLAUDE.md"];
+  const backupFolder = path.join(targetDir, ".storage", ".backups", stamp);
+  const rootRuleFiles = [
+    "AGENTS.md",
+    path.join(".nongton-core", "context", "PERSONAL_ASSISTANT_AGENT_BRIEF.md")
+  ];
   let hasBackedUpAny = false;
 
   for (const ruleFile of rootRuleFiles) {
@@ -111,7 +114,7 @@ function backupExistingRules(targetDir) {
       hasBackedUpAny = true;
     }
   }
-  for (const dirName of [".agents", "domains"]) {
+  for (const dirName of [".agents", path.join(".nongton-core", "domains")]) {
     const fullDir = path.join(targetDir, dirName);
     if (fs.existsSync(fullDir)) {
       copyDirectoryRecursive(fullDir, path.join(backupFolder, dirName), true);
@@ -124,13 +127,15 @@ function backupExistingRules(targetDir) {
 
 function ensureRootMemoryDocs(targetDir, isoDateStr) {
   const docMap = buildRootMemoryTemplates(isoDateStr);
+  const contextDir = path.join(targetDir, ".nongton-core", "context");
+  ensureDirectory(contextDir);
   for (const [docName, docContent] of Object.entries(docMap)) {
-    const docPath = path.join(targetDir, docName);
+    const docPath = path.join(contextDir, docName);
     if (!fs.existsSync(docPath)) {
       fs.writeFileSync(docPath, docContent, "utf8");
-      console.log(`  - ${docName.padEnd(34)} : created memory doc`);
+      console.log(`  - .nongton-core/context/${docName.padEnd(14)} : created memory doc`);
     } else {
-      console.log(`  - ${docName.padEnd(34)} : preserved existing file`);
+      console.log(`  - .nongton-core/context/${docName.padEnd(14)} : preserved existing file`);
     }
   }
 }
@@ -138,7 +143,13 @@ function ensureRootMemoryDocs(targetDir, isoDateStr) {
 function runInitCommand(targetDir, allowOverwrite) {
   console.log(`\n[nongton v${PACKAGE_META.version}] Setting up Personal Assistant AI Agent & Multi-Domain Hub in: ${targetDir}\n`);
 
-  const rootFiles = ["PERSONAL_ASSISTANT_AGENT_BRIEF.md", "AGENTS.md", "CLAUDE.md", ".gitignore", ".vercelignore"];
+  const rootFiles = [
+    "AGENTS.md",
+    ".gitignore",
+    path.join(".nongton-core", "context", "PERSONAL_ASSISTANT_AGENT_BRIEF.md"),
+    path.join(".nongton-core", "skills-lock.json"),
+    path.join(".vscode", "settings.json")
+  ];
   for (const fileName of rootFiles) {
     const srcFile = path.join(PACKAGE_ROOT, fileName);
     const destFile = path.join(targetDir, fileName);
@@ -147,23 +158,29 @@ function runInitCommand(targetDir, allowOverwrite) {
   }
 
   copyDirectoryRecursive(path.join(PACKAGE_ROOT, ".agents"), path.join(targetDir, ".agents"), allowOverwrite);
-  console.log(`  - .agents/                           : installed (rules + unified /nongton skill & 6 references)`);
+  console.log(`  - .agents/                           : installed (rules + unified /nongton skill & 7 references)`);
 
-  copyDirectoryRecursive(path.join(PACKAGE_ROOT, "domains"), path.join(targetDir, "domains"), allowOverwrite);
-  console.log(`  - domains/                           : installed (6 multi-domain expert packs)`);
+  copyDirectoryRecursive(path.join(PACKAGE_ROOT, ".nongton-core", "domains"), path.join(targetDir, ".nongton-core", "domains"), allowOverwrite);
+  console.log(`  - .nongton-core/domains/             : installed (6 multi-domain expert packs)`);
 
-  for (const dirName of ["projects", "_archive", "_to_delete", ".backups"]) {
+  for (const dirName of [
+    "projects",
+    path.join(".storage", "_archive"),
+    path.join(".storage", "_to_delete"),
+    path.join(".storage", ".backups")
+  ]) {
     ensureDirectory(path.join(targetDir, dirName));
   }
-  console.log(`  - folders                            : projects/, _archive/, _to_delete/, .backups/ ready`);
+  console.log(`  - folders                            : projects/, .storage/(_archive, _to_delete, .backups) ready`);
 
   const todayStr = new Date().toISOString().slice(0, 10);
-  const memoryPath = path.join(targetDir, "PROJECT_MEMORY.md");
+  const memoryPath = path.join(targetDir, ".nongton-core", "context", "PROJECT_MEMORY.md");
+  ensureDirectory(path.dirname(memoryPath));
   if (!fs.existsSync(memoryPath)) {
     fs.writeFileSync(memoryPath, buildStarterMemory(todayStr), "utf8");
-    console.log(`  - PROJECT_MEMORY.md                  : created starter memory`);
+    console.log(`  - .nongton-core/context/PROJECT_MEMORY.md : created starter memory`);
   } else {
-    console.log(`  - PROJECT_MEMORY.md                  : preserved existing file`);
+    console.log(`  - .nongton-core/context/PROJECT_MEMORY.md : preserved existing file`);
   }
 
   ensureRootMemoryDocs(targetDir, todayStr);
@@ -171,16 +188,20 @@ function runInitCommand(targetDir, allowOverwrite) {
 
 function buildStatusChecks(targetDir) {
   const refDir = path.join(targetDir, ".agents", "skills", "nongton", "references");
-  const domDir = path.join(targetDir, "domains");
+  const coreDir = path.join(targetDir, ".nongton-core");
+  const ctxDir = path.join(coreDir, "context");
+  const domDir = path.join(coreDir, "domains");
+  const storageDir = path.join(targetDir, ".storage");
   return [
-    ["PERSONAL_ASSISTANT_AGENT_BRIEF.md", path.join(targetDir, "PERSONAL_ASSISTANT_AGENT_BRIEF.md")],
-    ["AGENTS.md", path.join(targetDir, "AGENTS.md")],
-    ["CLAUDE.md", path.join(targetDir, "CLAUDE.md")],
-    ["PROJECT_MEMORY.md", path.join(targetDir, "PROJECT_MEMORY.md")],
-    ["Memory: DECISIONS.md", path.join(targetDir, "DECISIONS.md")],
-    ["Memory: BACKLOG.md", path.join(targetDir, "BACKLOG.md")],
-    ["Memory: CHANGELOG.md", path.join(targetDir, "CHANGELOG.md")],
-    ["Memory: SOURCES.md", path.join(targetDir, "SOURCES.md")],
+    ["AGENTS.md (Root Entrypoint)", path.join(targetDir, "AGENTS.md")],
+    ["Core Brief: .nongton-core/context/PERSONAL_ASSISTANT_AGENT_BRIEF.md", path.join(ctxDir, "PERSONAL_ASSISTANT_AGENT_BRIEF.md")],
+    ["Memory: .nongton-core/context/PROJECT_MEMORY.md", path.join(ctxDir, "PROJECT_MEMORY.md")],
+    ["Memory: .nongton-core/context/DECISIONS.md", path.join(ctxDir, "DECISIONS.md")],
+    ["Memory: .nongton-core/context/BACKLOG.md", path.join(ctxDir, "BACKLOG.md")],
+    ["Memory: .nongton-core/context/CHANGELOG.md", path.join(ctxDir, "CHANGELOG.md")],
+    ["Memory: .nongton-core/context/SOURCES.md", path.join(ctxDir, "SOURCES.md")],
+    ["Core Lock: .nongton-core/skills-lock.json", path.join(coreDir, "skills-lock.json")],
+    ["IDE Config: .vscode/settings.json", path.join(targetDir, ".vscode", "settings.json")],
     ["Rule: project-standards", path.join(targetDir, ".agents", "rules", "project-standards.md")],
     ["Unified Skill: /nongton", path.join(targetDir, ".agents", "skills", "nongton", "SKILL.md")],
     ["Ref: master-brief-v2.0 (Unlimited)", path.join(refDir, "master-brief-v2.0.md")],
@@ -190,15 +211,16 @@ function buildStatusChecks(targetDir) {
     ["Ref: deploy-security", path.join(refDir, "deploy-security.md")],
     ["Ref: session-manager", path.join(refDir, "session-manager.md")],
     ["Ref: game-dev-hub", path.join(refDir, "game-dev-hub.md")],
-    ["Domain: research-and-analysis", path.join(domDir, "research-and-analysis.md")],
-    ["Domain: web-and-software", path.join(domDir, "web-and-software.md")],
-    ["Domain: academic-and-writing", path.join(domDir, "academic-and-writing.md")],
-    ["Domain: design-and-ux", path.join(domDir, "design-and-ux.md")],
-    ["Domain: planning-and-management", path.join(domDir, "planning-and-management.md")],
-    ["Domain: game-design-and-dev (Hub)", path.join(domDir, "game-design-and-dev.md")],
-    ["Folder: _archive/", path.join(targetDir, "_archive")],
-    ["Folder: projects/", path.join(targetDir, "projects")],
-    ["Folder: _to_delete/", path.join(targetDir, "_to_delete")]
+    ["Domain: .nongton-core/domains/research-and-analysis", path.join(domDir, "research-and-analysis.md")],
+    ["Domain: .nongton-core/domains/web-and-software", path.join(domDir, "web-and-software.md")],
+    ["Domain: .nongton-core/domains/academic-and-writing", path.join(domDir, "academic-and-writing.md")],
+    ["Domain: .nongton-core/domains/design-and-ux", path.join(domDir, "design-and-ux.md")],
+    ["Domain: .nongton-core/domains/planning-and-management", path.join(domDir, "planning-and-management.md")],
+    ["Domain: .nongton-core/domains/game-design-and-dev (Hub)", path.join(domDir, "game-design-and-dev.md")],
+    ["Storage: .storage/_archive/", path.join(storageDir, "_archive")],
+    ["Storage: .storage/_to_delete/", path.join(storageDir, "_to_delete")],
+    ["Storage: .storage/.backups/", path.join(storageDir, ".backups")],
+    ["Folder: projects/", path.join(targetDir, "projects")]
   ];
 }
 

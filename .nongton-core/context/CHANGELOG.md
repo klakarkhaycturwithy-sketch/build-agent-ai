@@ -1,5 +1,18 @@
 # CHANGELOG (บันทึกการเปลี่ยนแปลงทุกเซสชัน)
 
+## [2026-11-18] จัดระเบียบโครงสร้างโปรเจกต์แบบรวมศูนย์ `.nongton-core/` & `.storage/` พร้อมตั้งค่า `.vscode/settings.json` (Spec Card ตัวเลือก C)
+- สำรองไฟล์ทั้งหมดก่อนย้ายและแก้ไขไว้ที่ `.storage/.backups/20261118-2218/`
+- ย้าย `bin/`, `domains/`, `skills-lock.json`, และไฟล์ความจำทั้ง 6 ไฟล์ (`PERSONAL_ASSISTANT_AGENT_BRIEF.md`, `PROJECT_MEMORY.md`, `DECISIONS.md`, `BACKLOG.md`, `CHANGELOG.md`, `SOURCES.md`) เข้าสู่ `.nongton-core/` (โดยไฟล์ความจำอยู่ใน `.nongton-core/context/`)
+- ย้าย `_archive/`, `_to_delete/`, และ `.backups/` เข้าสู่ `.storage/`
+- สร้างไฟล์ `.vscode/settings.json` สำหรับทำ Visual File Nesting และซ่อนโฟลเดอร์ `.storage/` จากแถบด้านซ้ายของ Antigravity IDE
+- อัปเดต Path อ้างอิงใน `.nongton-core/bin/cli.js`, `package.json`, `AGENTS.md`, `.agents/rules/project-standards.md`, `.agents/skills/nongton/SKILL.md`, `.agents/skills/nongton/references/session-manager.md`, `README.md`, และ `.gitignore` โดยไม่ลดขนาดไฟล์งานเดิม
+
+## [2026-11-18] นำไฟล์และโฟลเดอร์ของ Gemini, Claude และ Vercel ที่ไม่จำเป็นออกจากหน้า Root ของโปรเจกต์
+- สำรองไฟล์ทั้งหมดก่อนแก้ไข/ลบไว้ที่ `.backups/20261118-2141/`
+- ลบไฟล์และโฟลเดอร์ที่ไม่จำเป็นออกจากหน้า Root ตามการอนุมัติใน Spec Card (ตัวเลือก B): `CLAUDE.md`, `.vercelignore`, `Gemini.lnk`, `Build-Agent-Claude.code-workspace`, `Build-Agent-Gemini.code-workspace`, `Claude-AppData/`, `Gemini-App/`, `Gemini-AppData/`, และ `Gemini-Config/`
+- คงเก็บสกิล React (`.agents/skills/vercel-react-best-practices/`) ไว้ใน `.agents/skills/` สำหรับใช้เวลาเขียนเว็บ
+- อัปเดต `bin/cli.js`, `package.json`, และ `.gitignore` ไม่ให้เรียกหาไฟล์ที่นำออกไปแล้ว และทดสอบ `node ./bin/cli.js status` ผ่านครบ 100%
+
 ## [2026-11-17] v2.1.0 — อัปเดตเวอร์ชันโปรเจกต์เป็น v2.1.0 และซิงก์ชุดสกิลเสริมครบ 8 สกิลขึ้น GitHub
 - อัปเดตหมายเลขเวอร์ชันโปรเจกต์จาก `2.0.0` เป็น `2.1.0` (`v2.1.0`) ใน `package.json`, `README.md`, และ `PROJECT_MEMORY.md`
 - ซิงก์ชุดสกิลเสริมทั้งหมดใน `.agents/skills/` และ `skills-lock.json` (`using-agent-skills`, `vercel-react-best-practices`, `web-design-engineer`, `supabase`, `agent-browser`, `executing-plans`, `grill-me`, `web-search`)

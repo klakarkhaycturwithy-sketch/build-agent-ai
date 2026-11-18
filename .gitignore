@@ -1,14 +1,9 @@
-# Read-only junction directories pointing to local app data/tokens (HARD RULE 8)
-Claude-AppData/
-Gemini-App/
-Gemini-AppData/
-Gemini-Config/
-
-# Local shortcuts & IDE workspace files
-Gemini.lnk
+# Local IDE workspace files
 *.code-workspace
 
-# Backups & soft-deleted files
+# Backups & soft-deleted files (.storage container & legacy root paths)
+.storage/.backups/
+.storage/_to_delete/
 .backups/
 _to_delete/
 
@@ -21,7 +16,6 @@ _to_delete/
 node_modules/
 dist/
 build/
-.vercel/
 
 # OS & logs
 .DS_Store

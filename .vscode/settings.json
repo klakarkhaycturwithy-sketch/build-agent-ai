@@ -1,0 +1,14 @@
+{
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "AGENTS.md": "README.md, .gitignore, PERSONAL_ASSISTANT_AGENT_BRIEF.md, PROJECT_MEMORY.md, DECISIONS.md, BACKLOG.md, CHANGELOG.md, SOURCES.md",
+    "package.json": "skills-lock.json, package-lock.json"
+  },
+  "files.exclude": {
+    "**/.storage": true,
+    "**/_archive": true,
+    "**/_to_delete": true,
+    "**/.backups": true
+  }
+}
