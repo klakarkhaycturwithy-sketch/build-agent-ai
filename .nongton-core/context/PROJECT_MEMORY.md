@@ -1,6 +1,6 @@
 # PROJECT MEMORY - nongton (Personal Assistant AI Agent & Multi-Domain Hub v2.1.0)
 
-Last Updated: 2026-11-21 01:03
+Last Updated: 2026-11-21 01:16
 
 ## 1. Architecture & Key Decisions
 - **Source of Truth:** `.nongton-core/context/PERSONAL_ASSISTANT_AGENT_BRIEF.md` (Version 2.0) + flagship extension `.nongton-core/domains/web-design-development.md` (Web Design & Development Specialist Pack v1.0).
@@ -33,7 +33,7 @@ Last Updated: 2026-11-21 01:03
 - Name: `nongton` (Student, beginner developer, enjoys trying new things, works around 19:00 onwards).
 - Hardware & OS: Windows, AMD Ryzen 5 5600, 32 GB RAM, AMD Radeon RX Vega GPU (Strictly NO CUDA/NVIDIA tools).
 - Tools & Platforms: Antigravity IDE, GitHub, Vercel, Netlify, Google Drive, Figma.
-- Design Style: Clean, simple, high quality (เรียบง่ายแต่มีคุณภาพ) — **Minimal Light** default (`#FAF8F5` background, `#FFFFFF` cards, `#0F766E` accent, Inter + Noto Sans Thai, bilingual TH/EN toggle; WCAG 2.2 AA text contrast audited by script on 2026-11-21) **or adaptable freely to match any project's visual direction and brand requirements**.
+- Design Style: Clean, simple, high quality (เรียบง่ายแต่มีคุณภาพ) — **Blue & White** default for websites & portfolio (`#FFFFFF` background, `#F4F8FD` cards, `#1D4ED8` primary blue accent, `#1E40AF` hover, `#0F172A` text, `#475569` muted/control border, Inter + Noto Sans Thai, bilingual TH/EN toggle; WCAG 2.2 AA text contrast audited by script on 2026-11-21) **or adaptable freely to match any project's visual direction and brand requirements**.
 - Communication Style:
   - Friendly, direct, easy to understand, no emojis in body text.
   - Explain in Thai; write code, filenames, and code comments in English.

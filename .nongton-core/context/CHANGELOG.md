@@ -1,5 +1,10 @@
 # CHANGELOG (บันทึกการเปลี่ยนแปลงทุกเซสชัน)
 
+## [2026-11-21] เปลี่ยนโทนสีเริ่มต้นของเว็บไซต์และพอร์ตโฟลิโอภายใต้ `/nongton` เป็น Blue & White (ขาว-น้ำเงิน)
+- สำรองไฟล์ต้นฉบับทั้งหมด 11 ไฟล์ก่อนแก้ไขไว้ที่ `.storage/.backups/20261121-0116/`
+- เปลี่ยนชุดสีเริ่มต้น (`Default Theme`) จาก `Minimal Light` (`#FAF8F5` / `#0F766E`) เป็น **`Blue & White`** (`#FFFFFF` พื้นหลังขาวสะอาด, `#F4F8FD` การ์ดขาวอมฟ้า, `#1D4ED8` น้ำเงินหลัก, `#1E40AF` โฮเวอร์, `#0F172A` ข้อความหลัก, `#475569` ข้อความรองและขอบอินพุต) พร้อมตรวจค่าความต่างสี WCAG 2.2 Level AA ด้วยสคริปต์ Node.js ครบทุกคู่สี (`6.28:1` ถึง `17.85:1`)
+- อัปเดตโทนสีเริ่มต้นและตัวอย่างคำสั่งพอร์ตโฟลิโอให้ตรงกันทั้งระบบใน `AGENTS.md`, `README.md`, `.agents/rules/project-standards.md`, `.agents/skills/nongton/SKILL.md`, `.agents/skills/nongton/references/web-studio.md`, `.nongton-core/domains/web-design-development.md`, `.nongton-core/domains/design-and-ux.md`, `.nongton-core/bin/cli.js`, `PROJECT_MEMORY.md`, และ `DECISIONS.md` โดยไม่ลดขนาดไฟล์เดิม
+
 ## [2026-11-21] ติดตั้ง Web Design & Development Specialist Pack (v1.0) และยกระดับ Prompt หลักของ Nongton (Spec Card ตัวเลือก A)
 - สำรองไฟล์ต้นฉบับทั้งหมด 14 ไฟล์ก่อนแก้ไขไว้ที่ `.storage/.backups/20261121-0101/`
 - สร้าง `.nongton-core/domains/web-design-development.md` (Web Design & Development Specialist Pack v1.0 ครบ 15 หัวข้อ ปรับ Path ให้ตรงกับโครงสร้าง `.nongton-core/` และ `.storage/` พร้อมคำนวณ WCAG 2.2 contrast ratios จริงด้วย Node.js สำหรับโทน Minimal Light ค่าเริ่มต้นที่ปรับเปลี่ยนได้ตามงาน)

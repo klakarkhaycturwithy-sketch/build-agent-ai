@@ -85,36 +85,36 @@ Offer a recommended default beside each unclear answer. Never guess silently.
 ## 5. DESIGN STANDARDS
 
 - **Design tokens first.** All colors, type sizes, spacing, radii, shadows, and motion durations live in tokens. No magic numbers in components.
-- **Style:** simple but high quality (the user's stated taste): strong hierarchy, generous whitespace, limited palette, consistent components. Default to the user's preferred **Minimal Light** palette when no specific brand palette is requested, or adapt freely to match any project's goals and visual direction.
+- **Style:** simple but high quality (the user's stated taste): strong hierarchy, generous whitespace, limited palette, consistent components. Default to the user's preferred **Blue & White** palette (including portfolio sites under `/nongton`) when no specific brand palette is requested, or adapt freely to match any project's goals and visual direction.
 - **Mobile-first, fluid layout.** Test at narrow, medium, and wide viewports; never rely on one breakpoint list.
 - **Every component** has defined states: default, hover, focus, active, disabled, loading, error, empty.
 - **Show before build:** for each page or component, produce a wireframe or mockup (ASCII layout, Figma frame, or image) and get approval. If Figma access is available, read the design from Figma; if not, ask for exports or screenshots.
 
-### Token starter (Minimal Light default — adapt freely to each project's visual direction)
+### Token starter (Blue & White default — adapt freely to each project's visual direction)
 
 ```css
 /* tokens.css — single source of truth for visual decisions
- * Default palette: Minimal Light (user preference; adapt freely per project goals).
+ * Default palette: Blue & White (updated user preference on 2026-11-21; adapt freely per project goals).
  * Contrast ratios verified by script on 2026-11-21 (WCAG 2.2 Level AA):
- *   #18181B on #FAF8F5 = 16.71:1 | #18181B on #FFFFFF = 17.72:1
- *   #52525B on #FAF8F5 =  7.29:1 | #52525B on #FFFFFF =  7.73:1
- *   #0F766E on #FAF8F5 =  5.16:1 | #0F766E on #FFFFFF =  5.47:1
- *   #FFFFFF on #0F766E =  5.47:1 | #FFFFFF on #115E59 =  7.58:1
- * Note: #E5E0D8 is decorative-only (1.24:1 / 1.31:1); use --color-border-control
+ *   #0F172A on #FFFFFF = 17.85:1 | #0F172A on #F4F8FD = 16.74:1
+ *   #475569 on #FFFFFF =  7.58:1 | #475569 on #F4F8FD =  7.11:1
+ *   #1D4ED8 on #FFFFFF =  6.70:1 | #1D4ED8 on #F4F8FD =  6.28:1
+ *   #FFFFFF on #1D4ED8 =  6.70:1 | #FFFFFF on #1E40AF =  8.72:1
+ * Note: #DBEAFE is decorative-only (1.22:1 / 1.14:1); use --color-border-control
  * for interactive input borders to satisfy WCAG 2.2 non-text contrast (>= 3:1).
  */
 :root {
   /* color: semantic names, not literal ones */
-  --color-bg: #FAF8F5;
-  --color-surface: #FFFFFF;
-  --color-border-subtle: #E5E0D8;
-  --color-border-control: #52525B;
-  --color-text: #18181B;
-  --color-text-muted: #52525B;
-  --color-primary: #0F766E;
-  --color-primary-hover: #115E59;
+  --color-bg: #FFFFFF;
+  --color-surface: #F4F8FD;
+  --color-border-subtle: #DBEAFE;
+  --color-border-control: #475569;
+  --color-text: #0F172A;
+  --color-text-muted: #475569;
+  --color-primary: #1D4ED8;
+  --color-primary-hover: #1E40AF;
   --color-on-primary: #FFFFFF;
-  --color-focus: #0F766E;
+  --color-focus: #1D4ED8;
 
   /* type: fluid scale */
   --font-body: "Inter", "Noto Sans Thai", system-ui, sans-serif;

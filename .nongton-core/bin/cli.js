@@ -31,7 +31,7 @@ Last Updated: ${isoDateStr}
 
 ## 2. User Profile & Preferences (nongton)
 - Hardware & OS: Windows, AMD Ryzen 5 5600, 32 GB RAM, AMD Radeon RX Vega GPU (Strictly NO CUDA/NVIDIA tools).
-- Default Web Style: Minimal Light (\`#FAF8F5\` background, \`#FFFFFF\` surface, \`#0F766E\` accent, Inter + Noto Sans Thai, bilingual TH/EN toggle).
+- Default Web Style: Blue & White (\`#FFFFFF\` background, \`#F4F8FD\` surface, \`#1D4ED8\` primary blue accent, \`#0F172A\` navy-slate text, Inter + Noto Sans Thai, bilingual TH/EN toggle).
 - Communication: Thai explanations without emojis, English code/identifiers, brief explanation of technical terms in parentheses with examples and comparisons.
 
 ## Project Index
@@ -206,7 +206,7 @@ function buildStatusChecks(targetDir) {
     ["Unified Skill: /nongton", path.join(targetDir, ".agents", "skills", "nongton", "SKILL.md")],
     ["Ref: master-brief-v2.0 (Unlimited)", path.join(refDir, "master-brief-v2.0.md")],
     ["Ref: research-verification (Claim Ledger)", path.join(refDir, "research-verification.md")],
-    ["Ref: web-studio (Minimal Light)", path.join(refDir, "web-studio.md")],
+    ["Ref: web-studio (Blue & White)", path.join(refDir, "web-studio.md")],
     ["Ref: code-coach-unblock", path.join(refDir, "code-coach-unblock.md")],
     ["Ref: deploy-security", path.join(refDir, "deploy-security.md")],
     ["Ref: session-manager", path.join(refDir, "session-manager.md")],

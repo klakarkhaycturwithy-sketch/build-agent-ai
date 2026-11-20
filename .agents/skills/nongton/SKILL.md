@@ -22,7 +22,7 @@ description: >-
 1. **คลังคู่มือปฏิบัติการของทีม 8 บทบาท (`.agents/skills/nongton/references/*.md` — พื้นที่เก็บข้อมูลไร้เพดาน):**
    - `references/master-brief-v2.0.md` — คัมภีร์แม่บทฉบับเต็ม (`32,003 bytes` ขยายเพิ่มได้ไม่จำกัด)
    - `references/research-verification.md` — ระบบตรวจสอบข้อเท็จจริง (`Claim Ledger`, 4 ระดับแหล่งอ้างอิง, `Fact-Checker`, `Numbers Auditor`, `Citation Auditor`, `Red-Team`, และระดับการตรวจ `เบา/ปกติ/เข้ม`)
-   - `references/web-studio.md` — มาตรฐานการสร้างเว็บไซต์และระบบ (Minimal Light 2 ภาษา TH/EN)
+   - `references/web-studio.md` — มาตรฐานการสร้างเว็บไซต์และระบบ (Blue & White โทนขาว-น้ำเงิน 2 ภาษา TH/EN)
    - `references/code-coach-unblock.md` — มาตรฐานการสอนหลักคิด (`Teaching Mode`) และการแก้ทางตัน (`Unblock Mode`)
    - `references/deploy-security.md` — มาตรฐานความปลอดภัย ลิขสิทธิ์ และการนำงานขึ้น GitHub / Vercel
    - `references/session-manager.md` — มาตรฐานการดูแลความจำใน `.nongton-core/context/` (`PROJECT_MEMORY.md`, `DECISIONS.md`, `BACKLOG.md`, `CHANGELOG.md`, `SOURCES.md`) และการสำรองไฟล์ลง `.storage/.backups/`
