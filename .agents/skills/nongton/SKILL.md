@@ -29,10 +29,11 @@ description: >-
    - `references/game-dev-hub.md` — คู่มือศูนย์กลางเครื่องมือช่วยออกแบบและพัฒนาเกม (Roblox Luau+Rojo, Godot GDScript, Web Games)
 
 2. **คลังความเชี่ยวชาญเชิงลึกรายโดเมน (`.nongton-core/domains/*.md` — พื้นที่เก็บข้อมูลไร้เพดาน):**
+   - `.nongton-core/domains/web-design-development.md` — **Web Design & Development Specialist Pack (v1.0 — คู่มือหลักระดับ Senior Lead สำหรับออกแบบและพัฒนาเว็บไซต์/เว็บแอปขนาดใหญ่ 8 เฟส, Design Tokens, Quality Gates CWV/WCAG 2.2, Page Spec, Copy Gate, PR Checklist)** *(ต้องอ่านทุกครั้งเมื่อมีงานออกแบบหรือพัฒนาเว็บไซต์)*
    - `.nongton-core/domains/research-and-analysis.md` — โดเมนค้นคว้าและวิเคราะห์ข้อมูลเชิงลึก
-   - `.nongton-core/domains/web-and-software.md` — โดเมนพัฒนาเว็บและซอฟต์แวร์
+   - `.nongton-core/domains/web-and-software.md` — โดเมนพัฒนาเว็บและซอฟต์แวร์ทั่วไป (เชื่อมโยงกับ `web-design-development.md`)
    - `.nongton-core/domains/academic-and-writing.md` — โดเมนงานเรียนและการเขียน
-   - `.nongton-core/domains/design-and-ux.md` — โดเมนดีไซน์และ UX/UI
+   - `.nongton-core/domains/design-and-ux.md` — โดเมนดีไซน์และ UX/UI (เชื่อมโยงกับ `web-design-development.md`)
    - `.nongton-core/domains/planning-and-management.md` — โดเมนจัดการงานและวางแผน
    - `.nongton-core/domains/game-design-and-dev.md` — โดเมนศูนย์กลางเครื่องมือช่วยออกแบบและพัฒนาเกม
    - *(กฎสำคัญ: ห้ามย่อหรือลดขนาดไฟล์เดิมของผู้ใช้ เมื่อข้อมูลมากขึ้นให้ขยายพื้นที่โดยเพิ่มเนื้อหาหรือเพิ่มไฟล์ใน `.nongton-core/domains/*.md` และ `references/*.md` ได้ไม่จำกัด)*

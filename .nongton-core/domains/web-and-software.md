@@ -18,3 +18,6 @@
 ## 5. ความชอบของผู้ใช้ในโดเมนนี้ (User Preferences - nongton)
 - โค้ดและคอมเมนต์เป็นภาษาอังกฤษ คำอธิบายเป็นภาษาไทยเข้าใจง่าย อธิบายศัพท์เทคนิคในวงเล็บพร้อมเปรียบเทียบให้เห็นภาพ
 
+## 6. การเชื่อมโยงสู่ Web Design & Development Specialist Pack
+- สำหรับงานออกแบบและพัฒนาเว็บไซต์หรือเว็บแอปขนาดใหญ่ (Multi-page, E-commerce, Dashboard, Design System, Thai/EN Bilingual Sites) ให้เปิดอ่านและใช้คู่มือเฉพาะทางหลักที่ `.nongton-core/domains/web-design-development.md` ควบคู่กับไฟล์นี้ (ไฟล์นี้ยังคงครอบคลุมงานสคริปต์ Python, Node.js, CLI, และการดีบักซอฟต์แวร์ทั่วไป)
+

@@ -14,5 +14,8 @@
 - การใช้สีฉูดฉาดเกินไป หรือใส่ลูกเล่นรกตาจนอ่านเนื้อหายาก
 
 ## 5. ความชอบของผู้ใช้ในโดเมนนี้ (User Preferences - nongton)
-- สไตล์หลักที่ชอบ: **เรียบง่ายแต่มีคุณภาพ (Minimal Light)** — พื้นหลังครีมอุ่น `#FAF8F5`, การ์ดสีขาว `#FFFFFF`, สีเน้นเขียวอมฟ้าเข้ม `#0F766E`, ฟอนต์ `Inter` + `Noto Sans Thai`, และมีปุ่มสลับภาษา `TH / EN`
+- สไตล์หลักที่ชอบ: **เรียบง่ายแต่มีคุณภาพ (Minimal Light)** — พื้นหลังครีมอุ่น `#FAF8F5`, การ์ดสีขาว `#FFFFFF`, สีเน้นเขียวอมฟ้าเข้ม `#0F766E`, ฟอนต์ `Inter` + `Noto Sans Thai`, และมีปุ่มสลับภาษา `TH / EN` (สามารถปรับเปลี่ยนโทนสีได้ตามโจทย์และแบรนด์ของแต่ละงาน)
+
+## 6. การเชื่อมโยงสู่ Web Design & Development Specialist Pack
+- สำหรับงานออกแบบ UI/UX, Design Tokens, Responsive Grid, Thai/English Typography, WCAG 2.2 Accessibility และ Page Spec ของเว็บไซต์และเว็บแอปขนาดใหญ่ ให้เปิดอ่านคู่มือเฉพาะทางฉบับเต็มที่ `.nongton-core/domains/web-design-development.md` ควบคู่กับไฟล์นี้
 

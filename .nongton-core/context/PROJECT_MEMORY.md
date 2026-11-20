@@ -1,9 +1,14 @@
 # PROJECT MEMORY - nongton (Personal Assistant AI Agent & Multi-Domain Hub v2.1.0)
 
-Last Updated: 2026-11-18 22:24
+Last Updated: 2026-11-21 01:03
 
 ## 1. Architecture & Key Decisions
-- **Source of Truth:** `.nongton-core/context/PERSONAL_ASSISTANT_AGENT_BRIEF.md` (Version 2.0).
+- **Source of Truth:** `.nongton-core/context/PERSONAL_ASSISTANT_AGENT_BRIEF.md` (Version 2.0) + flagship extension `.nongton-core/domains/web-design-development.md` (Web Design & Development Specialist Pack v1.0).
+- **Web Design & Development Specialist Lead (Added 2026-11-21):**
+  - Full 8-phase operating model with approval gates (`Discovery -> Strategy & IA -> Design System -> Architecture/Tech Decision Gate -> Build in Vertical Slices -> Hardening -> Launch -> Maintain`).
+  - Quality Gates verified against official `web.dev` Core Web Vitals (`LCP <= 2.5 s`, `INP <= 200 ms`, `CLS <= 0.1` at p75) and `W3C WAI` WCAG 2.2 Level AA (`4.5:1` text contrast, `3:1` large text/UI contrast, `24x24 CSS px` target size SC 2.5.8, focus not obscured SC 2.4.11).
+  - Mandatory `PAGE SPEC`, honest testing labels (`[tested]`, `[code-reviewed]`, `[not tested]`), `COPY CARD` / `ASSETS.md` copy gate, and PR Checklist / Definition of Done.
+  - Legacy web files (`web-and-software.md`, `design-and-ux.md`, `web-studio.md`) preserved 100% intact with cross-references to `web-design-development.md`.
 - **Consolidated Workspace Layout (`.nongton-core/` & `.storage/` + `.vscode/settings.json`):**
   - `.nongton-core/bin/cli.js`, `.nongton-core/domains/*.md`, `.nongton-core/context/*.md` (`PERSONAL_ASSISTANT_AGENT_BRIEF.md`, `PROJECT_MEMORY.md`, `DECISIONS.md`, `BACKLOG.md`, `CHANGELOG.md`, `SOURCES.md`), and `.nongton-core/skills-lock.json`.
   - `.storage/_archive/`, `.storage/_to_delete/`, and `.storage/.backups/`.
@@ -24,10 +29,11 @@ Last Updated: 2026-11-18 22:24
   - Never delete files; move obsolete files to `_to_delete/` and deprecated standalone game-prompt files to `_archive/` with the deprecation header `"เลิกใช้ - เป็นเนื้อหาของโปรเจกต์เกม ไม่เกี่ยวกับโปรเจกต์นี้"`.
 
 ## 2. User Profile & Preferences (nongton)
+- Agent / User Naming Convention (Confirmed 2026-11-21): `AGENT_NAME = Nongton`, `USER_ADDRESS = "คุณ nongton"` (user explicitly confirmed keeping `"nongton"` alongside `"คุณ"`).
 - Name: `nongton` (Student, beginner developer, enjoys trying new things, works around 19:00 onwards).
 - Hardware & OS: Windows, AMD Ryzen 5 5600, 32 GB RAM, AMD Radeon RX Vega GPU (Strictly NO CUDA/NVIDIA tools).
 - Tools & Platforms: Antigravity IDE, GitHub, Vercel, Netlify, Google Drive, Figma.
-- Design Style: Clean, simple, high quality (เรียบง่ายแต่มีคุณภาพ) — **Minimal Light** (`#FAF8F5` background, `#FFFFFF` cards, `#0F766E` accent, Inter + Noto Sans Thai, bilingual TH/EN toggle).
+- Design Style: Clean, simple, high quality (เรียบง่ายแต่มีคุณภาพ) — **Minimal Light** default (`#FAF8F5` background, `#FFFFFF` cards, `#0F766E` accent, Inter + Noto Sans Thai, bilingual TH/EN toggle; WCAG 2.2 AA text contrast audited by script on 2026-11-21) **or adaptable freely to match any project's visual direction and brand requirements**.
 - Communication Style:
   - Friendly, direct, easy to understand, no emojis in body text.
   - Explain in Thai; write code, filenames, and code comments in English.

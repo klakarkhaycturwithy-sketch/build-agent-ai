@@ -5,3 +5,5 @@
 | MDN Web Docs (developer.mozilla.org) | พัฒนาเว็บและซอฟต์แวร์ | ระดับ 1 (แหล่งต้นทางทางการ) | 2026-11-17 | เอกสารมาตรฐาน HTML/CSS/JS |
 | Python & Node.js Official Docs | พัฒนาเว็บและซอฟต์แวร์ | ระดับ 1 (แหล่งต้นทางทางการ) | 2026-11-17 | เอกสารมาตรฐานภาษาและรันไทม์ |
 | Roblox Creator Docs & Godot Docs | ศูนย์กลางเครื่องมือเกม | ระดับ 1 (แหล่งต้นทางทางการ) | 2026-11-17 | เอกสารอ้างอิงเมื่อช่วยออกแบบ/เขียนโค้ดเกม |
+| web.dev — Core Web Vitals (web.dev/articles/vitals) | ออกแบบและพัฒนาเว็บไซต์ | ระดับ 1 (แหล่งต้นทางทางการ) | 2026-11-21 | เกณฑ์ p75: LCP <= 2.5 s (2,500 ms), INP <= 200 ms, CLS <= 0.1 |
+| W3C WAI — WCAG 2.2 Level AA (w3.org/TR/WCAG22/) | ออกแบบและพัฒนาเว็บไซต์ | ระดับ 1 (แหล่งต้นทางทางการ) | 2026-11-21 | Contrast >= 4.5:1 (large/UI >= 3:1), SC 2.5.8 Target Size >= 24x24 CSS px, SC 2.4.11 Focus Not Obscured |

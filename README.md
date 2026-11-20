@@ -1,7 +1,7 @@
 # nongton — Personal Assistant AI Agent & Multi-Domain Expert Hub (v2.1.0)
 
-**`nongton`** คือ **AI Agent ผู้ช่วยส่วนตัวระดับผู้เชี่ยวชาญหลายสาขา (Personal Assistant AI Agent)** สำหรับคุณ **nongton** ที่มี **ทีมค้นคว้าวิจัยและตรวจสอบความถูกต้องของข้อมูล (8-Role Research & Verification Team)** อยู่ในตัว เพื่อให้งานและโปรเจกต์ทุกชิ้นได้คุณภาพสูงสุด
-- แม้ตัวเอเจนต์จะไม่ใช่เอนจินสร้างเกมเฉพาะทาง (not a dedicated game-creation engine) แต่ทำหน้าที่เป็น **ศูนย์กลางรวมเครื่องมือ (Central Hub)** ที่ช่วยได้ครบทุกสาขา ทั้งงานค้นคว้าวิเคราะห์, พัฒนาเว็บและซอฟต์แวร์, งานเรียนและการเขียน, ดีไซน์ UX/UI, การวางแผนจัดการงาน, **รวมถึงช่วยออกแบบและพัฒนาเกมของคุณ `nongton`**
+**`nongton`** คือ **AI Agent ผู้ช่วยส่วนตัวระดับผู้เชี่ยวชาญหลายสาขา (Personal Assistant AI Agent)** สำหรับคุณ **nongton** ที่มี **ความเชี่ยวชาญเฉพาะทางระดับ Senior Lead ด้านการออกแบบและพัฒนาเว็บไซต์และเว็บแอปขนาดใหญ่ (Web Design & Development Specialist Pack v1.0)** พร้อม **ทีมค้นคว้าวิจัยและตรวจสอบความถูกต้องของข้อมูล (8-Role Research & Verification Team)** อยู่ในตัว เพื่อให้งานและโปรเจกต์ทุกชิ้นได้คุณภาพสูงสุด
+- แม้ตัวเอเจนต์จะไม่ใช่เอนจินสร้างเกมเฉพาะทาง (not a dedicated game-creation engine) แต่ทำหน้าที่เป็น **ศูนย์กลางรวมเครื่องมือ (Central Hub)** ที่ช่วยได้ครบทุกสาขา ทั้งงานออกแบบและพัฒนาเว็บไซต์ระดับสูง, ค้นคว้าวิเคราะห์, พัฒนาซอฟต์แวร์, งานเรียนและการเขียน, ดีไซน์ UX/UI, การวางแผนจัดการงาน, **รวมถึงช่วยออกแบบและพัฒนาเกมของคุณ `nongton`**
 
 ---
 
@@ -32,7 +32,7 @@ npx github:klakarkhaycturwithy-sketch/nongton
 
 - **`AGENTS.md`** — ทางเข้ากฎหลักของทีมภายใน 8 บทบาทที่หน้า Root (ชี้ไปยัง `.nongton-core/context/` และ `.nongton-core/domains/`)
 - **`.nongton-core/context/`** — ศูนย์รวมไฟล์ความจำและสถานะของโปรเจกต์ (`PERSONAL_ASSISTANT_AGENT_BRIEF.md`, `PROJECT_MEMORY.md`, `DECISIONS.md`, `BACKLOG.md`, `CHANGELOG.md`, `SOURCES.md`)
-- **`.nongton-core/domains/`** — คลังความเชี่ยวชาญเชิงลึกรายโดเมน (Domain Packs 6 สาขาเริ่มต้น + เพิ่มได้ตลอด)
+- **`.nongton-core/domains/`** — คลังความเชี่ยวชาญเชิงลึกรายโดเมน (Domain Packs 7 สาขา นำโดย `web-design-development.md` Specialist Pack v1.0 สำหรับเว็บไซต์ขนาดใหญ่ + เพิ่มได้ตลอด)
 - **`.nongton-core/bin/cli.js` & `.nongton-core/skills-lock.json`** — เอนจิน CLI ของ `npx nongton` และรายการล็อกเวอร์ชันสกิลเสริม
 - **`.storage/`** — ศูนย์รวมโฟลเดอร์สำรองและเก็บถาวร (`.storage/_archive/`, `.storage/_to_delete/`, `.storage/.backups/`) ซ่อนจากแถบด้านซ้ายของ IDE ด้วย `.vscode/settings.json`
 - **`.agents/skills/nongton/`** — ทางเข้าคำสั่งเดียว (`/nongton`) และคู่มือปฏิบัติการย่อยใน `references/`

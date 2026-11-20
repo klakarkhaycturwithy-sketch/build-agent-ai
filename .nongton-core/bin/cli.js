@@ -35,7 +35,7 @@ Last Updated: ${isoDateStr}
 - Communication: Thai explanations without emojis, English code/identifiers, brief explanation of technical terms in parentheses with examples and comparisons.
 
 ## Project Index
-- Active Domain Packs in \`domains/\`: \`research-and-analysis\`, \`web-and-software\`, \`academic-and-writing\`, \`design-and-ux\`, \`planning-and-management\`, \`game-design-and-dev\`
+- Active Domain Packs in \`.nongton-core/domains/\`: \`web-design-development\` (Web Specialist Pack v1.0), \`research-and-analysis\`, \`web-and-software\`, \`academic-and-writing\`, \`design-and-ux\`, \`planning-and-management\`, \`game-design-and-dev\`
 `;
 }
 
@@ -161,7 +161,7 @@ function runInitCommand(targetDir, allowOverwrite) {
   console.log(`  - .agents/                           : installed (rules + unified /nongton skill & 7 references)`);
 
   copyDirectoryRecursive(path.join(PACKAGE_ROOT, ".nongton-core", "domains"), path.join(targetDir, ".nongton-core", "domains"), allowOverwrite);
-  console.log(`  - .nongton-core/domains/             : installed (6 multi-domain expert packs)`);
+  console.log(`  - .nongton-core/domains/             : installed (7 multi-domain expert packs incl. Web Design & Dev Specialist)`);
 
   for (const dirName of [
     "projects",
@@ -211,6 +211,7 @@ function buildStatusChecks(targetDir) {
     ["Ref: deploy-security", path.join(refDir, "deploy-security.md")],
     ["Ref: session-manager", path.join(refDir, "session-manager.md")],
     ["Ref: game-dev-hub", path.join(refDir, "game-dev-hub.md")],
+    ["Domain: .nongton-core/domains/web-design-development (Specialist)", path.join(domDir, "web-design-development.md")],
     ["Domain: .nongton-core/domains/research-and-analysis", path.join(domDir, "research-and-analysis.md")],
     ["Domain: .nongton-core/domains/web-and-software", path.join(domDir, "web-and-software.md")],
     ["Domain: .nongton-core/domains/academic-and-writing", path.join(domDir, "academic-and-writing.md")],

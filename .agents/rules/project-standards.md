@@ -21,6 +21,7 @@ trigger: always_on
 │   ├── bin/
 │   │   └── cli.js                     สคริปต์ CLI สำหรับคำสั่ง npx nongton
 │   ├── domains/                       Domain Pack ความเชี่ยวชาญเชิงลึกแต่ละสาขา (ข้อ 3.1)
+│   │   ├── web-design-development.md  Web Design & Development Specialist Pack (v1.0 — เว็บไซต์/เว็บแอปขนาดใหญ่)
 │   │   ├── research-and-analysis.md   โดเมนค้นคว้าและวิเคราะห์ข้อมูล
 │   │   ├── web-and-software.md        โดเมนพัฒนาเว็บและซอฟต์แวร์
 │   │   ├── academic-and-writing.md    โดเมนงานเรียนและการเขียน
@@ -49,8 +50,9 @@ trigger: always_on
 ```
 
 # 2. DEFAULT DESIGN SYSTEM (สไตล์ดีไซน์เริ่มต้น: เรียบง่ายแต่มีคุณภาพ)
-เมื่อสร้างหน้าเว็บ เอกสาร หรือ UI และผู้ใช้ไม่ได้ระบุโทนสีอื่น ให้ใช้โทน **Minimal Light** ที่คุณ `nongton` ชอบเป็นค่าเริ่มต้น:
-- สีพื้นหลังหลัก (`--bg-page`): `#FAF8F5` (ครีมอุ่น สบายตา)
-- สีพื้นหลังการ์ด (`--bg-surface`): `#FFFFFF` | สีเน้น (`--accent`): `#0F766E` (เขียวอมฟ้าเข้ม)
-- ฟอนต์: `"Inter", "Noto Sans Thai", sans-serif`
-- รองรับปุ่มสลับ 2 ภาษา (`TH` / `EN`) ด้วย `data-i18n` สำหรับเว็บแนะนำตัวหรือพอร์ตโฟลิโอ
+เมื่อสร้างหน้าเว็บ เอกสาร หรือ UI และผู้ใช้ไม่ได้ระบุโทนสีอื่น ให้ใช้โทน **Minimal Light** ที่คุณ `nongton` ชอบเป็นค่าเริ่มต้น (หรือปรับเปลี่ยนโทนสีและ Design Tokens ได้อิสระตามโจทย์และแบรนด์ของแต่ละงาน โดยต้องตรวจอัตราความต่างสี WCAG 2.2 Level AA เสมอ):
+- สีพื้นหลังหลัก (`--bg-page` / `--color-bg`): `#FAF8F5` (ครีมอุ่น สบายตา)
+- สีพื้นหลังการ์ด (`--bg-surface` / `--color-surface`): `#FFFFFF` | สีเน้น (`--accent` / `--color-primary`): `#0F766E` (เขียวอมฟ้าเข้ม)
+- ฟอนต์: `"Inter", "Noto Sans Thai", sans-serif` (กำหนด `line-height: 1.7` สำหรับข้อความภาษาไทย)
+- รองรับปุ่มสลับ 2 ภาษา (`TH` / `EN`) ด้วย `data-i18n` หรือไฟล์ `src/i18n/th.json` + `en.json`
+- สำหรับงานออกแบบและพัฒนาเว็บไซต์ขนาดใหญ่ ให้โหลดคู่มือฉบับเต็มจาก `.nongton-core/domains/web-design-development.md` (8 เฟสการทำงาน, Vertical Slices, Quality Gates Core Web Vitals + WCAG 2.2, Page Spec, Copy Gate, PR Checklist)

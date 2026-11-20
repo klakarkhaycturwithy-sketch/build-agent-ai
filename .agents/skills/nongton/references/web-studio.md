@@ -15,3 +15,7 @@
 - ฟอนต์: `"Inter", "Noto Sans Thai", system-ui, sans-serif`
 - รองรับปุ่มสลับ 2 ภาษา (`TH` / `EN`) ด้วยแอตทริบิวต์ `data-i18n` สำหรับเว็บแนะนำตัวหรือพอร์ตโฟลิโอ
 
+## 3. การเชื่อมโยงสู่มาตรฐานระดับสูง (Large-Scale Web Specialist Pack)
+- สำหรับการออกแบบและพัฒนาเว็บไซต์หรือเว็บแอปขนาดใหญ่ (หลายหน้า, อีคอมเมิร์ซ, แดชบอร์ด, Design System, ระบบสองภาษาเต็มรูปแบบ) ให้เปิดอ่านและยึดคู่มือเฉพาะทางฉบับเต็มใน `.nongton-core/domains/web-design-development.md`
+- คู่มือดังกล่าวครอบคลุม: 8 เฟสพร้อมด่านอนุมัติ (`Discovery` -> `Maintain`), การสร้างแบบ `Vertical Slices`, ระบบ `Design Tokens` (ใช้ Minimal Light เป็นค่าเริ่มต้นหรือปรับตามโจทย์ของแต่ละงานได้อิสระ), `Tech Decision Gate`, เกณฑ์คุณภาพ `Core Web Vitals` + `WCAG 2.2 Level AA`, `PAGE SPEC`, ป้ายทดสอบ (`[tested]` / `[code-reviewed]` / `[not tested]`), `COPY CARD` / `ASSETS.md`, และ `PR Checklist`
+

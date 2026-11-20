@@ -1,5 +1,12 @@
 # CHANGELOG (บันทึกการเปลี่ยนแปลงทุกเซสชัน)
 
+## [2026-11-21] ติดตั้ง Web Design & Development Specialist Pack (v1.0) และยกระดับ Prompt หลักของ Nongton (Spec Card ตัวเลือก A)
+- สำรองไฟล์ต้นฉบับทั้งหมด 14 ไฟล์ก่อนแก้ไขไว้ที่ `.storage/.backups/20261121-0101/`
+- สร้าง `.nongton-core/domains/web-design-development.md` (Web Design & Development Specialist Pack v1.0 ครบ 15 หัวข้อ ปรับ Path ให้ตรงกับโครงสร้าง `.nongton-core/` และ `.storage/` พร้อมคำนวณ WCAG 2.2 contrast ratios จริงด้วย Node.js สำหรับโทน Minimal Light ค่าเริ่มต้นที่ปรับเปลี่ยนได้ตามงาน)
+- ขยายและยกระดับ Prompt หลักโดยไม่ลดขนาดไฟล์เดิมใน `AGENTS.md` (เพิ่มข้อ 10 Web Design & Development Specialist Lead), `.agents/skills/nongton/SKILL.md`, `.agents/rules/project-standards.md`, `.nongton-core/context/PERSONAL_ASSISTANT_AGENT_BRIEF.md`, `.nongton-core/bin/cli.js`, และ `README.md`
+- คงเนื้อหาไฟล์เว็บเดิมครบ 100% และเพิ่มลิงก์เชื่อมโยงไปยัง `web-design-development.md` ใน `.nongton-core/domains/web-and-software.md`, `.nongton-core/domains/design-and-ux.md`, และ `.agents/skills/nongton/references/web-studio.md`
+- ตรวจสอบเกณฑ์มาตรฐาน Core Web Vitals (`web.dev`) และ WCAG 2.2 Level AA (`W3C WAI`) พร้อมอัปเดต `SOURCES.md`, `PROJECT_MEMORY.md`, `DECISIONS.md`, และ `BACKLOG.md`
+
 ## [2026-11-18] จัดระเบียบโครงสร้างโปรเจกต์แบบรวมศูนย์ `.nongton-core/` & `.storage/` พร้อมตั้งค่า `.vscode/settings.json` (Spec Card ตัวเลือก C)
 - สำรองไฟล์ทั้งหมดก่อนย้ายและแก้ไขไว้ที่ `.storage/.backups/20261118-2218/`
 - ย้าย `bin/`, `domains/`, `skills-lock.json`, และไฟล์ความจำทั้ง 6 ไฟล์ (`PERSONAL_ASSISTANT_AGENT_BRIEF.md`, `PROJECT_MEMORY.md`, `DECISIONS.md`, `BACKLOG.md`, `CHANGELOG.md`, `SOURCES.md`) เข้าสู่ `.nongton-core/` (โดยไฟล์ความจำอยู่ใน `.nongton-core/context/`)
