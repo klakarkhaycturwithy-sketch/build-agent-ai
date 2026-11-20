@@ -1,5 +1,12 @@
 # CHANGELOG (บันทึกการเปลี่ยนแปลงทุกเซสชัน)
 
+## [2026-11-21] บูรณาการ Professional Web Development Instructions (7 หมวด) และเพิ่มตัวส่งต่อ `bin/cli.js` ขึ้น GitHub (ตรวจระดับ `เข้ม`)
+- สำรองไฟล์ต้นฉบับทั้งหมด 10 ไฟล์ก่อนแก้ไขไว้ที่ `.storage/.backups/20261121-0200/`
+- เพิ่มหัวข้อ 16 (`PROFESSIONAL FULL-STACK WEB DEVELOPMENT INSTRUCTIONS`) ครบทั้ง 7 หมวด (`Before Development`, `Development Standards`, `UI/UX Standards`, `Security and Reliability`, `Testing and Verification`, `Important Rules`, `Final Report` 5 หัวข้อ) ลงใน `.nongton-core/domains/web-design-development.md`
+- ขยายสรุปมาตรฐาน 7 หมวดใน `.agents/skills/nongton/references/web-studio.md` (หัวข้อ 4) และเชื่อมโยงบทบาท `Full-Stack`, `Architect`, `UX/UI`, `QA` ใน `AGENTS.md` (ข้อ 10.4) โดยคุมขนาด `AGENTS.md` ให้อยู่ต่ำกว่า 24,000 ไบต์
+- เพิ่มตัวส่งต่อ `bin/cli.js` (`require("../.nongton-core/bin/cli.js")`) เข้าในคลัง Git และเพิ่ม `"bin/"` ใน `package.json` (`files`) เพื่อรองรับเครื่องที่เรียก Path เดิม
+- ตรวจสอบระดับ `เข้ม` ครบทั้ง 4 ด้าน (`Fact-Checker`, `Numbers Auditor`, `Citation Auditor`, `Red-Team`) ร่วมกับ `research` sub-agent บริบทอิสระ และอัปเดต `PROJECT_MEMORY.md`, `DECISIONS.md`, และ `BACKLOG.md`
+
 ## [2026-11-21] ปรับขอบเขตข้อความงานเว็บให้เปิดกว้างทุกประเภทเว็บไซต์ตามคำสั่ง (ไม่จำกัดเฉพาะพอร์ตโฟลิโอ)
 - สำรองไฟล์ต้นฉบับทั้งหมด 8 ไฟล์ก่อนแก้ไขไว้ที่ `.storage/.backups/20261121-0121/`
 - ปรับข้อความใน `README.md`, `.agents/rules/project-standards.md`, `.agents/skills/nongton/references/web-studio.md`, `.nongton-core/domains/web-design-development.md`, `.nongton-core/domains/design-and-ux.md`, และ `.nongton-core/context/PROJECT_MEMORY.md` ให้ระบุชัดเจนว่ารองรับเว็บไซต์และเว็บแอปทุกประเภทตามคำสั่งของผู้ใช้ โดยไม่จำกัดอยู่แค่เว็บพอร์ตโฟลิโอหรือประเภทใดประเภทหนึ่ง พร้อมบันทึกการตัดสินใจใน `DECISIONS.md` โดยไม่ลดขนาดไฟล์เดิม

@@ -8,6 +8,7 @@
   },
   "files": [
     ".nongton-core/",
+    "bin/",
     ".agents/",
     ".vscode/",
     "AGENTS.md",

@@ -1,14 +1,16 @@
 # PROJECT MEMORY - nongton (Personal Assistant AI Agent & Multi-Domain Hub v2.1.0)
 
-Last Updated: 2026-11-21 01:22
+Last Updated: 2026-11-21 02:02
 
 ## 1. Architecture & Key Decisions
-- **Source of Truth:** `.nongton-core/context/PERSONAL_ASSISTANT_AGENT_BRIEF.md` (Version 2.0) + flagship extension `.nongton-core/domains/web-design-development.md` (Web Design & Development Specialist Pack v1.0).
+- **Source of Truth:** `.nongton-core/context/PERSONAL_ASSISTANT_AGENT_BRIEF.md` (Version 2.0) + flagship extension `.nongton-core/domains/web-design-development.md` (Web Design & Development Specialist Pack v1.0 + Section 16 Professional Full-Stack Web Development Instructions).
 - **Web Design & Development Specialist Lead (Added 2026-11-21):**
   - Full 8-phase operating model with approval gates (`Discovery -> Strategy & IA -> Design System -> Architecture/Tech Decision Gate -> Build in Vertical Slices -> Hardening -> Launch -> Maintain`).
+  - Integrated **7-Pillar Professional Web Development Instructions** (Section 16 of `web-design-development.md` & Section 4 of `web-studio.md`): acts simultaneously as Senior Full-Stack Developer, Software Architect, UI/UX Designer, and QA Engineer (`1. Before Development`, `2. Development Standards`, `3. UI/UX Standards`, `4. Security and Reliability`, `5. Testing and Verification`, `6. Important Rules`, `7. Final Report` with 5 mandatory deliverables).
   - Quality Gates verified against official `web.dev` Core Web Vitals (`LCP <= 2.5 s`, `INP <= 200 ms`, `CLS <= 0.1` at p75) and `W3C WAI` WCAG 2.2 Level AA (`4.5:1` text contrast, `3:1` large text/UI contrast, `24x24 CSS px` target size SC 2.5.8, focus not obscured SC 2.4.11).
   - Mandatory `PAGE SPEC`, honest testing labels (`[tested]`, `[code-reviewed]`, `[not tested]`), `COPY CARD` / `ASSETS.md` copy gate, and PR Checklist / Definition of Done.
   - Legacy web files (`web-and-software.md`, `design-and-ux.md`, `web-studio.md`) preserved 100% intact with cross-references to `web-design-development.md`.
+  - Backward-compatible CLI bridge `bin/cli.js` forwarding to `.nongton-core/bin/cli.js` included in `package.json` `"files"`.
 - **Consolidated Workspace Layout (`.nongton-core/` & `.storage/` + `.vscode/settings.json`):**
   - `.nongton-core/bin/cli.js`, `.nongton-core/domains/*.md`, `.nongton-core/context/*.md` (`PERSONAL_ASSISTANT_AGENT_BRIEF.md`, `PROJECT_MEMORY.md`, `DECISIONS.md`, `BACKLOG.md`, `CHANGELOG.md`, `SOURCES.md`), and `.nongton-core/skills-lock.json`.
   - `.storage/_archive/`, `.storage/_to_delete/`, and `.storage/.backups/`.
