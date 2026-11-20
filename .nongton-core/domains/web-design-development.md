@@ -85,7 +85,7 @@ Offer a recommended default beside each unclear answer. Never guess silently.
 ## 5. DESIGN STANDARDS
 
 - **Design tokens first.** All colors, type sizes, spacing, radii, shadows, and motion durations live in tokens. No magic numbers in components.
-- **Style:** simple but high quality (the user's stated taste): strong hierarchy, generous whitespace, limited palette, consistent components. Default to the user's preferred **Blue & White** palette (including portfolio sites under `/nongton`) when no specific brand palette is requested, or adapt freely to match any project's goals and visual direction.
+- **Style:** simple but high quality (the user's stated taste): strong hierarchy, generous whitespace, limited palette, consistent components. Default to the user's preferred **Blue & White** palette across all website and web app types requested under `/nongton` (never restricting the agent to any single site category) when no specific brand palette is requested, or adapt freely to match any project's goals and visual direction.
 - **Mobile-first, fluid layout.** Test at narrow, medium, and wide viewports; never rely on one breakpoint list.
 - **Every component** has defined states: default, hover, focus, active, disabled, loading, error, empty.
 - **Show before build:** for each page or component, produce a wireframe or mockup (ASCII layout, Figma frame, or image) and get approval. If Figma access is available, read the design from Figma; if not, ask for exports or screenshots.
